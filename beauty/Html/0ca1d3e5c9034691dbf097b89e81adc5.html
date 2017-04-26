@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>已发货订单页</title>
+<link href="/totti/Public/Admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/totti/Public/Admin/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/totti/Public/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="/totti/Public/Admin/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="/totti/Public/Admin/js/select-ui.min.js"></script>
+<script type="text/javascript" src="/totti/Public/Admin/editor/kindeditor.js"></script>
+<script type="text/javascript" src="/totti/Public/Admin/js/time/abc/timer/WdatePicker.js"></script>
+    <style type="text/css" >
+        #page a,#page span{display: inline-block; width:18px;height:18px ;  padding: 5px;  margin: 2px;  text-decoration: none;  text-align: center;  line-height: 18px;  background: #f0ead8;  color:#000000;  border: 1px solid #c2d2d7;  }
+        #page a:hover{background: #EDF6FA;color:#333;}
+        #page span{background: #333;color: #fff;font-weight: bold;}
+        #page div{float:right;}
+
+    </style>
+<script type="text/javascript">
+    KE.show({
+        id : 'content7',
+        cssPath : './index.css'
+    });
+  </script>
+  
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $(".select1").uedSelect({
+		width : 345			  
+	});
+	$(".select2").uedSelect({
+		width : 167  
+	});
+	$(".select3").uedSelect({
+		width : 100
+	});
+});
+</script>
+
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">订单管理</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    <div id="usual1" class="usual"> 
+
+  	<div id="tab2" class="tabson">
+
+        <div id="order" style="float: left;margin-right: 500px">
+            <ul>
+                <li style="padding: 10px;font-size: 16px">订单编号:76166e954d1efc9</li>
+                <li style="padding: 10px;font-size: 16px">买家姓名:wangsaipu</li>
+                <li style="padding: 10px;font-size: 16px">付款时间:2016-12-02 16:00:29</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li style="padding: 10px;font-size: 16px">买家手机号:17720161202</li>
+                <li style="padding: 10px;font-size: 16px">邮编:000000</li>
+                <li style="padding: 10px;font-size: 16px">收货地址:青海省-海南自治州-市辖区sadndjksanfasdf</li>
+            </ul>
+        </div>
+
+
+
+
+            <table class="tablelist">
+                <thead>
+                <tr>
+                <th><input name="" type="checkbox" value="" checked="checked"/></th>
+                <th><i class="sort"><img src="/totti/Public/Admin/images/px.gif" /></i>编号</th>
+                <th>商品名称</th>
+                <th>图片</th>
+                <th>商品价格</th>
+                <th>商品数量</th>
+                <th>商品总价</th>
+                </tr>
+                </thead>
+                <tbody>
+             <tr>
+                    <td><input name="" type="checkbox" value="" /></td>
+                    <td>1</td>
+                    <td>韩束化妆品 兰花补水保湿滋养抗氧化 乳液</td>
+                    <td><img src="/Uploads/2016-11-10/58244047e0375.jpg" width="50" height="50"/></td>
+                    <td>49</td>
+                    <td>1</td>
+                    <td>49</td>
+                </tr>        </tbody>
+    </table>    </div>  
+       
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+
+    </div>
+
+</body>
+
+</html>

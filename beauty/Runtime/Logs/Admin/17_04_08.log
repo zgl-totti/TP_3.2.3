@@ -1,0 +1,1722 @@
+[ 2017-04-08T09:48:41+08:00 ] 127.0.0.1 /totti/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027002s ]
+
+[ 2017-04-08T09:48:41+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:48:42+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:48:47+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkAdmin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0380s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:48:53+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:48:55+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491616135',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0320s ]
+
+[ 2017-04-08T09:48:56+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491616136',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0420s ]
+
+[ 2017-04-08T09:48:56+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:48:57+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/top.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.029001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029001s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0610s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-08T09:48:58+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/left.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036002s ]
+SQL: SHOW COLUMNS FROM `beauty_admin_nav` [ RunTime:0.0480s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 0 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0320s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_rule` [ RunTime:0.0340s ]
+SQL: SELECT `condition`,`name` FROM `beauty_auth_rule` WHERE `id` IN ('1','41','40','42','43','44','2','13','14','3','15','16','18','20','21','19','4','22','23','5','24','25','6','26','27','7','28','51','9','34','35','484','488','8','29','30','31','32','33','54','10','36','37','11','38','52','53','45','46','47','12','39','48','17','49','50','55','56','57') AND `type` = 1 AND `status` = 1  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 1 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 2 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 48 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 3 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 4 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 5 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 6 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 7 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 8 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 9 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 10 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 11 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 12 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 45 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 55 ORDER BY priority  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:48:58+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/footer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/footer.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-08T09:48:59+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.036003s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.036003s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0170s ]
+SQL: SELECT `username`,`lastlogin`,`lastip` FROM `beauty_admin` WHERE `id` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY salenum desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY num LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:49:01+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0060s ]
+SQL: SELECT `goodsname`,`salenum` FROM `beauty_goods` ORDER BY salenum desc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2017-04-08T09:49:02+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T09:49:03+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0070s ]
+SQL: SELECT `goodsname`,`salenum` FROM `beauty_goods` ORDER BY salenum desc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2017-04-08T09:49:06+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022001s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0180s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:49:06+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T09:49:08+08:00 ] 127.0.0.1 /totti/index.php/Admin/AuthGroup/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.024001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.025001s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0170s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0170s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=1 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=2 )  [ RunTime:0.0000s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=3 )  [ RunTime:0.0000s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=4 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=5 )  [ RunTime:0.0020s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=6 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=7 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=8 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=10 )  [ RunTime:0.0000s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=11 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=12 )  [ RunTime:0.0010s ]
+SQL: SELECT a.username FROM beauty_auth_group_access g INNER JOIN beauty_admin a ON g.uid=a.id  WHERE ( g.group_id=13 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:49:12+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/changeInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:50:10+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Admin/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018001s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_admin` WHERE `username` LIKE '%%' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` LIKE '%%' ORDER BY id LIMIT 0,5   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0110s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=2 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=4 )  [ RunTime:0.0000s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=5 )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:50:13+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0120s ]
+SQL: SELECT `group_id` FROM `beauty_auth_group_access` WHERE `uid` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:50:16+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Admin/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+
+[ 2017-04-08T09:50:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/changeInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:11+08:00 ] 127.0.0.1 /totti/index.php/Admin/Message/sendMessage.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.018001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.029002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:14+08:00 ] 127.0.0.1 /totti/index.php/Admin/Message/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Message/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013001s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0130s ]
+SQL: SELECT a.id,a.status,t.title,t.content,t.time,ad.username FROM beauty_message_admin a,beauty_messagetext t,beauty_admin ad WHERE ( a.textId=t.id and a.sendId=ad.id and a.status!=3 ) AND a.receiveId = '1' ORDER BY t.id desc  [ RunTime:0.0190s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND ( status!=3 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND ( status=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:16+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Admin/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0140s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_admin` WHERE `username` LIKE '%%' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` LIKE '%%' ORDER BY id LIMIT 0,5   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=1 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=2 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=3 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=4 )  [ RunTime:0.0010s ]
+SQL: SELECT g.title FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g ON a.group_id=g.id  WHERE ( a.uid=5 )  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:53:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Admin/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+
+[ 2017-04-08T09:53:21+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/edit/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0130s ]
+SQL: SELECT `group_id` FROM `beauty_auth_group_access` WHERE `uid` = 1  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `beauty_auth_group`  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T09:53:28+08:00 ] 127.0.0.1 /totti/index.php/Admin/Category/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Category/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.026002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.026002s ]
+SQL: SHOW COLUMNS FROM `beauty_category` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_category` WHERE `cname` LIKE '%%' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_category` WHERE `cname` LIKE '%%' LIMIT 0,8   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','2')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','2','3','2','3')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','2','3','2','4')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','2','3','2','5')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','2','3','2','6')  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','7')  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_category` WHERE `id` IN ('1','7','8')  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined offset: 0 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 1 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 2 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 3 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 4 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 5 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 6 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined offset: 7 D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+NOTIC: [8] Undefined index: path D:\phpstudy\WWW\totti\beauty\Admin\Controller\CategoryController.class.php 第 47 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: time1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\9f66147abaac200cdd78b369301fc8ca.php 第 154 行.
+NOTIC: [8] Undefined variable: time2 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\9f66147abaac200cdd78b369301fc8ca.php 第 154 行.
+NOTIC: [8] Undefined variable: time1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\9f66147abaac200cdd78b369301fc8ca.php 第 156 行.
+NOTIC: [8] Undefined variable: time2 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\9f66147abaac200cdd78b369301fc8ca.php 第 156 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:32+08:00 ] 127.0.0.1 /totti/index.php/Admin/Category/editorCate/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_category` [ RunTime:0.0120s ]
+SQL: SELECT `cname` FROM `beauty_category` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.020002s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.020002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T09:53:33+08:00 ] 127.0.0.1 /totti/index.php/Admin/Category/getCateByPid.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_category` [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_category` WHERE `pid` = 0  [ RunTime:0.0156s ]
+
+[ 2017-04-08T10:12:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/User/UserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/User/UserList.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.022001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022001s ]
+
+[ 2017-04-08T10:12:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:19+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:20+08:00 ] 127.0.0.1 /totti/index.php/Admin/User/UserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/User/UserList.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:20+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T10:12:20+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:24+08:00 ] 127.0.0.1 /totti/index.php/Admin/Admin/loginout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:24+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T10:12:28+08:00 ] 127.0.0.1 /totti/index.php/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-08T10:12:28+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T10:12:28+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:34+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkAdmin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:37+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:38+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491617558',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0440s ]
+
+[ 2017-04-08T10:12:39+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0050s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491617559',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0220s ]
+
+[ 2017-04-08T10:12:40+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:41+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0150s ]
+SQL: SELECT `username`,`lastlogin`,`lastip` FROM `beauty_admin` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY salenum desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY num LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:42+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/left.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin_nav` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 0 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0090s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_rule` [ RunTime:0.0070s ]
+SQL: SELECT `condition`,`name` FROM `beauty_auth_rule` WHERE `id` IN ('1','41','40','42','43','44','2','13','14','3','15','16','18','20','21','19','4','22','23','5','24','25','6','26','27','7','28','51','9','34','35','484','488','8','29','30','31','32','33','54','10','36','37','11','38','52','53','45','46','47','12','39','48','17','49','50','55','56','57') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 1 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 2 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 48 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 3 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 4 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 5 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 6 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 7 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 8 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 9 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 10 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 11 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 12 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 45 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 55 ORDER BY priority  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006000s ]
+
+[ 2017-04-08T10:12:43+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/top.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0170s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T10:12:43+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/footer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/footer.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2017-04-08T10:12:44+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0170s ]
+SQL: SELECT `goodsname`,`salenum` FROM `beauty_goods` ORDER BY salenum desc LIMIT 0,10   [ RunTime:0.0010s ]
+
+[ 2017-04-08T10:12:45+08:00 ] 127.0.0.1 /totti/index.php/Admin/User/UserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/User/UserList.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Undefined index: chaXun D:\phpstudy\WWW\totti\beauty\Admin\Controller\UserController.class.php 第 8 行.
+SQL: SHOW COLUMNS FROM `beauty_user` [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_user` LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_user` ORDER BY beauty_user.id LIMIT 0,5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.050003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.050003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T10:12:55+08:00 ] 127.0.0.1 /totti/index.php/Admin/User/UserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/User/UserList.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+
+[ 2017-04-08T10:13:03+08:00 ] 127.0.0.1 /totti/index.php/Admin/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Brand/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.020001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020001s ]
+NOTIC: [8] Undefined index: chaXun D:\phpstudy\WWW\totti\beauty\Admin\Controller\BrandController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `beauty_brands` [ RunTime:0.0180s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_brands` LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_brands` ORDER BY id LIMIT 0,5   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:10+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.019001s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Order/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.027002s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.027002s ]
+
+[ 2017-04-08T17:10:10+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.056003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.013001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.013001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:11+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.007001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:15+08:00 ] 127.0.0.1 /totti/index.php/Admin/Brand/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Brand/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.012001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012001s ]
+
+[ 2017-04-08T17:10:15+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:16+08:00 ] 127.0.0.1 /totti/index.php/Admin/User/UserList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/User/UserList.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+
+[ 2017-04-08T17:10:16+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:16+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.023001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.023001s ]
+
+[ 2017-04-08T17:10:17+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:17+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017001s ]
+
+[ 2017-04-08T17:10:17+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:21+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkAdmin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:24+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:25+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491642625',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0380s ]
+
+[ 2017-04-08T17:10:26+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0080s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491642626',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0250s ]
+
+[ 2017-04-08T17:10:26+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:27+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/top.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014001s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0220s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-08T17:10:28+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0210s ]
+SQL: SELECT `username`,`lastlogin`,`lastip` FROM `beauty_admin` WHERE `id` = 1  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0340s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY salenum desc LIMIT 5   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY num LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.091005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.091005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-04-08T17:10:28+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/footer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/footer.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:10:30+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/left.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.019001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019001s ]
+SQL: SHOW COLUMNS FROM `beauty_admin_nav` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 0 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0410s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_rule` [ RunTime:0.0110s ]
+SQL: SELECT `condition`,`name` FROM `beauty_auth_rule` WHERE `id` IN ('1','41','40','42','43','44','2','13','14','3','15','16','18','20','21','19','4','22','23','5','24','25','6','26','27','7','28','51','9','34','35','484','488','8','29','30','31','32','33','54','10','36','37','11','38','52','53','45','46','47','12','39','48','17','49','50','55','56','57') AND `type` = 1 AND `status` = 1  [ RunTime:0.0180s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 1 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 2 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 48 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 3 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 4 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 5 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 6 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 7 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 8 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 9 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 10 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 11 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 12 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 45 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 55 ORDER BY priority  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:31+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0200s ]
+SQL: SELECT `goodsname`,`salenum` FROM `beauty_goods` ORDER BY salenum desc LIMIT 0,10   [ RunTime:0.0020s ]
+
+[ 2017-04-08T17:10:34+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Order/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0210s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0130s ]
+SQL: SELECT COUNT(*) AS tp_count FROM beauty_order o LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_order_status` [ RunTime:0.0110s ]
+SQL: SELECT o.price,o.orderno,o.create_time,u.username,os.adminstatus,os.statusname,o.id FROM beauty_order_status os,beauty_order o,beauty_user u WHERE ( o.status=os.id and u.id=o.mid ) ORDER BY o.id desc LIMIT 0,10   [ RunTime:0.0080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:10:34+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Order/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+
+[ 2017-04-08T17:17:30+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/detial/oid/42.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:17:30+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:30+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:37+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/dfk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:37+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T17:17:37+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:38+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/dfk.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-08T17:17:38+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+
+[ 2017-04-08T17:17:38+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:17:43+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:49+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkVerify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:17:51+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/chkAdmin.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:52+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0170s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491643072',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0990s ]
+
+[ 2017-04-08T17:17:53+08:00 ] 127.0.0.1 /totti/index.php/Admin/Login/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0170s ]
+NOTIC: [8] Undefined index: validate D:\phpstudy\WWW\totti\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_admin` WHERE `username` = 'admin' AND `password` = '21232f297a57a5a743894a0e4a801fc3' LIMIT 1   [ RunTime:0.0020s ]
+SQL: UPDATE `beauty_admin` SET `online`='1',`lastlogin`='1491643073',`lastip`='127.0.0.1' WHERE `id` = 1 [ RunTime:0.0200s ]
+
+[ 2017-04-08T17:17:53+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:17:54+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/top.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/top.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_message_admin` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `beauty_message_admin` WHERE `receiveId` = 1 AND `status` = 1 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:17:56+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/left.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/left.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin_nav` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 0 ORDER BY priority  [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_group_access` [ RunTime:0.0100s ]
+SQL: SELECT `uid`,`group_id`,`title`,`rules` FROM beauty_auth_group_access a INNER JOIN beauty_auth_group g on a.group_id=g.id  WHERE ( a.uid='1' and g.status='1' )  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_auth_rule` [ RunTime:0.0080s ]
+SQL: SELECT `condition`,`name` FROM `beauty_auth_rule` WHERE `id` IN ('1','41','40','42','43','44','2','13','14','3','15','16','18','20','21','19','4','22','23','5','24','25','6','26','27','7','28','51','9','34','35','484','488','8','29','30','31','32','33','54','10','36','37','11','38','52','53','45','46','47','12','39','48','17','49','50','55','56','57') AND `type` = 1 AND `status` = 1  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 1 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 2 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 48 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 3 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 4 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 5 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 6 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 7 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 8 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 9 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 10 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 11 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 12 ORDER BY priority  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 45 ORDER BY priority  [ RunTime:0.0010s ]
+SQL: SELECT * FROM `beauty_admin_nav` WHERE `pid` = 55 ORDER BY priority  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+NOTIC: [8] Undefined variable: v1 D:\phpstudy\WWW\totti\beauty\Runtime\Cache\Admin\2bf9087051dfcad938f84a67b5b048ca.php 第 415 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:56+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/footer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Index/footer.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:57+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_admin` [ RunTime:0.0250s ]
+SQL: SELECT `username`,`lastlogin`,`lastip` FROM `beauty_admin` WHERE `id` = 1  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY salenum desc LIMIT 5   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `beauty_goods` ORDER BY num LIMIT 5   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:17:58+08:00 ] 127.0.0.1 /totti/index.php/Admin/Index/getGoodsTop.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `beauty_goods` [ RunTime:0.0110s ]
+SQL: SELECT `goodsname`,`salenum` FROM `beauty_goods` ORDER BY salenum desc LIMIT 0,10   [ RunTime:0.0020s ]
+
+[ 2017-04-08T17:18:00+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Order/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0120s ]
+SQL: SELECT COUNT(*) AS tp_count FROM beauty_order o LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `beauty_order_status` [ RunTime:0.0080s ]
+SQL: SELECT o.price,o.orderno,o.create_time,u.username,os.adminstatus,os.statusname,o.id FROM beauty_order_status os,beauty_order o,beauty_user u WHERE ( o.status=os.id and u.id=o.mid ) ORDER BY o.id desc LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-04-08T17:18:03+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/detial/oid/42.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0080s ]
+SQL: SELECT a.username,a.area,a.address,o.create_time,a.mobile,a.ecode,o.orderno,o.id FROM `beauty_order` `o`,`beauty_addresses` `a` WHERE (  o.address=a.id ) AND o.id = '42'  [ RunTime:0.0160s ]
+SQL: SHOW COLUMNS FROM `beauty_order_goods` [ RunTime:0.0090s ]
+SQL: SELECT g.goodsname,og.buynum,og.saleprice,g.imagename,g.imageurl FROM `beauty_order_goods` `og`,`beauty_goods` `g` WHERE og.oid = '42' AND ( og.gid=g.id )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-04-08T17:19:12+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/detial/oid/42.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0070s ]
+SQL: SELECT a.username,a.area,a.address,o.create_time,a.mobile,a.ecode,o.orderno,o.id FROM `beauty_order` `o`,`beauty_addresses` `a` WHERE (  o.address=a.id ) AND o.id = '42'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_order_goods` [ RunTime:0.0070s ]
+SQL: SELECT g.goodsname,og.buynum,og.saleprice,g.imagename,g.imageurl FROM `beauty_order_goods` `og`,`beauty_goods` `g` WHERE og.oid = '42' AND ( og.gid=g.id )  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-04-08T17:22:20+08:00 ] 127.0.0.1 /totti/index.php/Admin/Order/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+NOTIC: [2] filemtime(): stat failed for ./beauty/Admin/View/Order/index.html D:\phpstudy\WWW\totti\ThinkPHP\Library\Behavior\ReadHtmlCacheBehavior.class.php 第 104 行.
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0290s ]
+SQL: SHOW COLUMNS FROM `beauty_order` [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM beauty_order o LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `beauty_order_status` [ RunTime:0.0090s ]
+SQL: SELECT o.price,o.orderno,o.create_time,u.username,os.adminstatus,os.statusname,o.id FROM beauty_order_status os,beauty_order o,beauty_user u WHERE ( o.status=os.id and u.id=o.mid ) ORDER BY o.id desc LIMIT 0,10   [ RunTime:0.0020s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
