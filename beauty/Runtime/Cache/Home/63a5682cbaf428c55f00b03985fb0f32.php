@@ -3,7 +3,7 @@
 <head lang="en">
     <title>beauty</title>
     <meta charset="utf-8"/>
-    <script src="/totti/Public/Home/js/jquery.min.1.8.2.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.min.1.8.2.js" type="text/javascript"></script>
     <style>
         .a {color: #808080}
         .ul{position: fixed;top: 400px;left: 50px;}
@@ -111,23 +111,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="/totti/Public/Home/fonts/iconfont.css" rel="stylesheet" type="text/css" />
-<!--<script src="/totti/Public/Home/js/jquery-1.9.1.min.js" type="text/javascript"></script>-->
-<script src="/totti/Public/Home/js/lrtk.js" type="text/javascript"></script>
-<link href="/totti/Public/Home/css/common.css" rel="stylesheet" type="text/css" />
-<link href="/totti/Public/Home/fonts/iconfont.css"  rel="stylesheet" type="text/css" />
-<link href="/totti/Public/Home/css/style.css" rel="stylesheet" type="text/css" />
-    <script src="/totti/Public/Admin/js/jquery.min.1.8.2.js" type="text/javascript"></script>
-    <script src="/totti/Public/Admin/js/jquery.form.js" type="text/javascript"></script>
-    <script src="/totti/Public/Home/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
-<script src="/totti/Public/Home/js/common_js.js" type="text/javascript"></script>
-<script type="text/javascript" src="/totti/Public/Home/js/layer/layer.js"></script>
-<script src="/totti/Public/Home/js/footer.js" type="text/javascript"></script>
-    <script src="/totti/Public/Home/js/jquery.lazyload.js" type="text/javascript"></script>
-    <script src="/totti/Public/Home/js/jquery.reveal.js" type="text/javascript"></script>
-    <script src="/totti/Public/Home/js/jquery.sumoselect.min.js" type="text/javascript"></script>
-    <script src="/totti/Public/Home/js/jquery.jumpto.js" type="text/javascript"></script>
-    <link rel="stylesheet" type="text/css" href="/totti/Public/Home/css/search.css">
+<link href="/TP_3.2.3/Public/Home/fonts/iconfont.css" rel="stylesheet" type="text/css" />
+<!--<script src="/TP_3.2.3/Public/Home/js/jquery-1.9.1.min.js" type="text/javascript"></script>-->
+<script src="/TP_3.2.3/Public/Home/js/lrtk.js" type="text/javascript"></script>
+<link href="/TP_3.2.3/Public/Home/css/common.css" rel="stylesheet" type="text/css" />
+<link href="/TP_3.2.3/Public/Home/fonts/iconfont.css"  rel="stylesheet" type="text/css" />
+<link href="/TP_3.2.3/Public/Home/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="/TP_3.2.3/Public/Admin/js/jquery.min.1.8.2.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Admin/js/jquery.form.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+<script src="/TP_3.2.3/Public/Home/js/common_js.js" type="text/javascript"></script>
+<script type="text/javascript" src="/TP_3.2.3/Public/Home/js/layer/layer.js"></script>
+<script src="/TP_3.2.3/Public/Home/js/footer.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.lazyload.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.reveal.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.sumoselect.min.js" type="text/javascript"></script>
+    <script src="/TP_3.2.3/Public/Home/js/jquery.jumpto.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/TP_3.2.3/Public/Home/css/search.css">
 
 </head>
 <script>
@@ -227,7 +227,7 @@
                     <li class="hd_menu_tit phone_c" data-addclass="hd_menu_hover"><a href="#" class="hd_menu "><em class="iconfont icon-shouji"></em>手机版</a>
                         <div class="hd_menu_list erweima">
                             <ul>
-                                <img src="/totti/Public/Home/images/mobile.png"  width="100px" height="100"/>
+                                <img src="/TP_3.2.3/Public/Home/images/mobile.png"  width="100px" height="100"/>
                             </ul>
                         </div>
                     </li>
@@ -355,7 +355,7 @@
 
 
             <a href="<?php echo U('Home/Sign/signCity');?>" class="link_bg" style="color: red;font-size: 20px;font-weight: bolder;font-style: italic;" target="_blank">
-                <img style="vertical-align: middle;margin-bottom:5px;"  src="/totti/Public/Home/images/jin.png" />金币商城
+                <img style="vertical-align: middle;margin-bottom:5px;"  src="/TP_3.2.3/Public/Home/images/jin.png" />金币商城
             </a>
         </div>
     </div>
@@ -387,7 +387,7 @@
               <?php if(is_array($activityInfo)): $i = 0; $__LIST__ = array_slice($activityInfo,0,1,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i; echo ($date['aname']); endforeach; endif; else: echo "" ;endif; ?>
             </div>
             <div class="Limit_title">
-                <?php if(is_array($activityInfo)): $i = 0; $__LIST__ = array_slice($activityInfo,0,1,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i;?><a href="<?php echo U('BuyBrands/goodsdetail',array('gid'=>$date['id'],'man'=>$date['rules'][0][0],'jian'=>$date['rules'][0][1]));?>" target="_blank"><img width="230" height="400"  class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>500_<?php echo ($date["imagename"]); ?>" src="/totti/Public/Home/images/loading.gif"/></a>
+                <?php if(is_array($activityInfo)): $i = 0; $__LIST__ = array_slice($activityInfo,0,1,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i;?><a href="<?php echo U('BuyBrands/goodsdetail',array('gid'=>$date['id'],'man'=>$date['rules'][0][0],'jian'=>$date['rules'][0][1]));?>" target="_blank"><img width="230" height="400"  class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>500_<?php echo ($date["imagename"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif"/></a>
                     <div class="title_name" style="margin-top: 100px ">
                         <h2 style="color: #000000; font-weight: bolder">满<?php echo ($date['rules'][0][0]); ?>减<?php echo ($date['rules'][0][1]); ?></h2>
                         <h2 style="color: orangered; ">LIMIT BUY</h2><h3>品牌优惠促销</h3>
@@ -501,9 +501,9 @@
                     </div>
                     <div class="bd">
                         <ul>
-                            <?php if(is_array($advertise2)): $i = 0; $__LIST__ = $advertise2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val2): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val2["picurl"]); echo ($val2["picname"]); ?>" src="/totti/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <!--<li><a href="#"><img class='lazy'  data-original="/totti/Public/Home/images/AD-p-5.jpg"  width="598" height="449"/></a></li>
-                            <li><a href="#"><img class='lazy'  data-original="/totti/Public/Home/images/AD-p-6.jpg"  width="598" height="449"/></a></li>-->
+                            <?php if(is_array($advertise2)): $i = 0; $__LIST__ = $advertise2;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val2): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val2["picurl"]); echo ($val2["picname"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <!--<li><a href="#"><img class='lazy'  data-original="/TP_3.2.3/Public/Home/images/AD-p-5.jpg"  width="598" height="449"/></a></li>
+                            <li><a href="#"><img class='lazy'  data-original="/TP_3.2.3/Public/Home/images/AD-p-6.jpg"  width="598" height="449"/></a></li>-->
                         </ul>
                     </div>
                     <a class="prev" href="javascript:void(0)"><em class="arrow"></em></a>
@@ -517,7 +517,7 @@
                     <ul>
                         <?php if(is_array($one)): $i = 0; $__LIST__ = array_slice($one,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i;?><li>
                                 <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank">
-                                    <img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/totti/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
+                                    <img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
                                 <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank" class="p_title_name"><?php echo (mb_substr($date["goodsname"],0,13,utf8)); ?>...</a>
                                 <div class="Numeral"><span class="price"><i>￥</i><?php echo ($date["saleprice"]); ?></span><span class="Sales">销量<i><?php echo ($date["salenum"]); ?></i>件</span></div>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -543,7 +543,7 @@
                     </div>
                     <div class="bd">
                         <ul>
-                            <?php if(is_array($advertise3)): $i = 0; $__LIST__ = $advertise3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val3): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val3["picurl"]); echo ($val3["picname"]); ?>" src="/totti/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <?php if(is_array($advertise3)): $i = 0; $__LIST__ = $advertise3;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val3): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val3["picurl"]); echo ($val3["picname"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     </div>
                     <a class="prev" href="javascript:void(0)"><em class="arrow"></em></a>
@@ -556,7 +556,7 @@
                 <div class="pro_list">
                     <ul>
                         <?php if(is_array($two)): $i = 0; $__LIST__ = array_slice($two,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i;?><li>
-                                <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank"><img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/totti/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
+                                <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank"><img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
                                 <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" class="p_title_name" target="_blank"><?php echo (mb_substr($date["goodsname"],0,13,utf8)); ?>...</a>
                                 <div class="Numeral"><span class="price"><i>￥</i><?php echo ($date["saleprice"]); ?></span><span class="Sales">销量<i><?php echo ($date["salenum"]); ?></i>件</span></div>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -584,9 +584,9 @@
                     </div>
                     <div class="bd">
                         <ul>
-                            <?php if(is_array($advertise4)): $i = 0; $__LIST__ = $advertise4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val4): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val4["picurl"]); echo ($val4["picname"]); ?>" src="/totti/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                            <!--<li><a href="#"><img class='lazy'  data-original="/totti/Public/Home/images/AD-p-5.jpg"  width="598" height="449"/></a></li>
-                            <li><a href="#"><img class='lazy'  data-original="/totti/Public/Home/images/AD-p-6.jpg"  width="598" height="449"/></a></li>-->
+                            <?php if(is_array($advertise4)): $i = 0; $__LIST__ = $advertise4;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val4): $mod = ($i % 2 );++$i;?><li><a href="#"><img class='lazy'  data-original="/Uploads/Advertises/<?php echo ($val4["picurl"]); echo ($val4["picname"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="598" height="449"/></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                            <!--<li><a href="#"><img class='lazy'  data-original="/TP_3.2.3/Public/Home/images/AD-p-5.jpg"  width="598" height="449"/></a></li>
+                            <li><a href="#"><img class='lazy'  data-original="/TP_3.2.3/Public/Home/images/AD-p-6.jpg"  width="598" height="449"/></a></li>-->
                         </ul>
                     </div>
                     <a class="prev" href="javascript:void(0)"><em class="arrow"></em></a>
@@ -599,7 +599,7 @@
                 <div class="pro_list">
                     <ul>
                         <?php if(is_array($three)): $i = 0; $__LIST__ = array_slice($three,0,6,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$date): $mod = ($i % 2 );++$i;?><li>
-                                <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank"><img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/totti/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
+                                <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" target="_blank"><img class='lazy'  data-original="/Uploads/<?php echo ($date["imageurl"]); ?>300_<?php echo ($date["imagename"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif" width="160px" height="140px" /></a>
                                 <a href="<?php echo U('Home/Order/goodsdetail',array('gid'=>$date['gid']));?>" class="p_title_name" target="_blank"><?php echo (mb_substr($date["goodsname"],0,13,utf8)); ?>...</a>
                                 <div class="Numeral"><span class="price"><i>￥</i><?php echo ($date["saleprice"]); ?></span><span class="Sales">销量<i><?php echo ($date["salenum"]); ?></i>件</span></div>
                             </li><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -616,7 +616,7 @@
             <div class="list">
                 <ul class="list_style">
                     <?php if(is_array($goodsLike)): $i = 0; $__LIST__ = array_slice($goodsLike,0,8,true);if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li class="p_info_u">
-                            <a href="<?php echo U('Order/goodsdetail',array('gid'=>$val['gid']));?>" class="p_img" target="_blank"><img style="width:220px;height:200px" class='lazy'  data-original="/Uploads/<?php echo ($val["imageurl"]); ?>300_<?php echo ($val["imagename"]); ?>" src="/totti/Public/Home/images/loading.gif"/></a>
+                            <a href="<?php echo U('Order/goodsdetail',array('gid'=>$val['gid']));?>" class="p_img" target="_blank"><img style="width:220px;height:200px" class='lazy'  data-original="/Uploads/<?php echo ($val["imageurl"]); ?>300_<?php echo ($val["imagename"]); ?>" src="/TP_3.2.3/Public/Home/images/loading.gif"/></a>
                             <a href="<?php echo U('Order/goodsdetail',array('gid'=>$val['gid']));?>" class="name" target="_blank"><?php echo (mb_substr($val["goodsname"],0,18,utf8)); ?>...</a>
                             <div class="Numeral"><span class="price"><i>￥</i><?php echo ($val["saleprice"]); ?></span><span class="Sales">销量<i><?php echo ($val["salenum"]); ?></i>件</span></div>
                         </li><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -675,7 +675,7 @@
                     }
                 }
                 if(res.info==''){
-                       str='<dd class="message1" style="height: 40px;margin-top: 20px;line-height:40px;margin-left:30px;background: url(/totti/Public/Home/images/settleup-nogoods.png) no-repeat">购物车内暂无商品，赶紧选购吧!</dd>';
+                       str='<dd class="message1" style="height: 40px;margin-top: 20px;line-height:40px;margin-left:30px;background: url(/TP_3.2.3/Public/Home/images/settleup-nogoods.png) no-repeat">购物车内暂无商品，赶紧选购吧!</dd>';
                 }
 
                 $('.good_cart').text(res.info.length);
@@ -721,7 +721,7 @@
             <div class="ServiceBox">
                 <div class="bjfffs"></div>
                 <dl onclick="javascript:;">
-                    <dt><img style="width:80px;height:60px" src="/totti/Public/Home/images/logo.png"></dt>
+                    <dt><img style="width:80px;height:60px" src="/TP_3.2.3/Public/Home/images/logo.png"></dt>
                     <dd><strong>艳艳</strong>
                         <p class="p1">9:00-22:00</p>
                         <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1932314889&site=qq&menu=yes">
@@ -729,7 +729,7 @@
                     </dd>
                 </dl>
                 <dl onclick="javascript:;">
-                    <dt><img style="width:80px;height:60px" src="/totti/Public/Home/images/logo.png"></dt>
+                    <dt><img style="width:80px;height:60px" src="/TP_3.2.3/Public/Home/images/logo.png"></dt>
                     <dd> <strong>贝贝</strong>
                         <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1875431157&site=qq&menu=yes">
                             <img border="0" src="http://wpa.qq.com/pa?p=2:1932314889:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
@@ -744,7 +744,7 @@
             <div class="cartBox">
                 <div class="bjfff"></div>
                 <div class="QR_code">
-                    <p><img src="/totti/Public/Home/images/2wm.png" width="150px" height="150px" style=" margin-top:10px;" /></p>
+                    <p><img src="/TP_3.2.3/Public/Home/images/2wm.png" width="150px" height="150px" style=" margin-top:10px;" /></p>
                     <p>微信扫一扫，关注我们</p>
                 </div>
             </div>
