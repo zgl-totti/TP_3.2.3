@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="__PUBLIC__/Admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Admin/css/select.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jQuery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.idTabs.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/select-ui.min.js"></script>
+    <script src="__PUBLIC__/Admin/js/layer/layer.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            //异步提交表单
+            $('.btn').click(function(){
+                $.post("{:U('AuthGroup/edit')}",$('#form1').serialize(),function(res){
+                    if(res.status=="ok"){
+                        layer.msg(
+                                res.msg,
+                                {icon:1,time:2000},
+                                function(){
+                                    window.location.href="{:U('AuthGroup/showlist')}";
+                                }
+                        );
+                    }else{
+                        layer.alert(res.msg);
+                    }
+                })
+                return false;
+            })
+
+      })
+  </script>
+</head>
+
+<body>
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">权限管理</a></li>
+        <li><a href="#">添加管理组</a></li>
+    </ul>
+</div>
+
+<div class="formbody">
+    <div id="usual1" class="usual">
+        <div id="tab1" class="tabson">
+            <form action="{:U('AuthGroup/edit')}" method="post" id="form1">
+                <input name="group_id" type="hidden" class="dfinput" value="{$data['id']}"  style="width:400px;"/>
+            <ul class="forminfo">
+                <li><label>角色名称<b>*</b></label><input name="title" type="text" class="dfinput" value="{$data['title']}"  style="width:400px;"/></li>
+                <li>
+                    <label>角色组员<b>*</b></label>
+                    <volist name="Uids" id="value">
+                        <span style="float:left;margin-right: 25px;">
+                        <label for="{$value.uid}" style="width: 70px">{$value.adminname}</label>
+                        <input name="uid[]" {$value['uid']?'checked':''} id="{$value.uid}" type="checkbox" value="{$value.uid}" class="dfinput"  style="width:18px;"/>
+                         </span>
+                    </volist>
+                </li>
+                <li><label>&nbsp;</label><input type="submit" class="btn" value="确认添加"/></li>
+            </ul>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

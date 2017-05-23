@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>列表页</title>
+<link href="__PUBLIC__/Admin/css/style.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Admin/css/select.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.idTabs.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Admin/js/select-ui.min.js"></script>
+    <style type="text/css">
+        #page a,#page span{
+            display: inline-block;width: 18px;height: 18px;padding: 5px;margin: 2px;text-decoration: none;background: #f0ead8;
+            color: #009900;border: 1px solid #c9e2b3;
+        }
+        #page a:hover{
+            background: #333;
+            color: #fff;
+
+        }
+        #page span {
+            background: #333;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+	<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+    <li><a href="#">首页</a></li>
+    <li><a href="#">系统设置</a></li>
+    </ul>
+    </div>
+    
+    <div class="formbody">
+    
+    
+    <div id="usual1" class="usual"> 
+    
+  
+     
+  	<div id="tab2" class="tabson">
+
+        <volist name="goods" id="val" key="k">
+    <ul class="seachform">
+        <form action="{:U('Admin/Sale/showlist',array('activity'=>$val['activity']))}" method="post" >
+    
+            <li><label>商品查询</label><input name="goodsname" type="text" class="scinput" value="{$scwords}" /></li>
+            <li><label>&nbsp;</label><input name="" type="submit" class="scbtn" value="查询"/></li>
+        </form>
+    </ul>
+    
+    
+    <table class="tablelist">
+    	<thead>
+    	<tr>
+        <th><input name="" type="checkbox" value="" checked="checked"/></th>
+        <th>编号<i class="sort"><img src="__PUBLIC__/Admin/images/px.gif" /></i></th>
+        <th>商品标题</th>
+        <th>商品图片</th>
+            <th>商品分类</th>
+            <th>商品品牌</th>
+        <th>市场价格</th>
+        <th>商品价格</th>
+        <th>库存</th>
+        <th>销量</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td><input name="goods" type="checkbox" value="" /></td>
+            <td>{$val['id']}</td>
+            <td>{$val['goodsname']}</td>
+            <td><img src="__PUBLIC__/Admin/Uploads/goods/{$val.pic}" width="150px" height="150px" alt=""/></td>
+            <td>{$val.catename}</td>
+            <td>{$val.bname}</td>
+            <td>{$val.marketprice}</td>
+            <td>{$val.price}</td>
+            <td>{$val.num}</td>
+            <td>{$val.salenum}</td>
+        </tr>
+
+        </tbody>
+    </table>
+        </volist>
+    </div>
+
+        <div id="page" style="margin-top: 20px; float: right">{$page}</div>
+	</div> 
+ 
+	<script type="text/javascript"> 
+      $("#usual1 ul").idTabs(); 
+    </script>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+    
+    
+    
+    
+    
+    </div>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,125 @@
+
+<layout name="Public/layout"/>
+
+<style>
+    .pic_inner div#sortBox{  width:100%;  height:50px;}
+    #sortBox div{float: left;height:30px;margin-top:10px;}
+    #sortBox div span{height:30px;font-size:16px;color:white;}
+    #sortBox div a#voteBtn{margin-left:15px;font-size:16px;width:50px;display: inline-block;color:#FF7200;background-color:white;text-align:center;line-height:30px; cursor: pointer;}
+    #sortBox div a#voteBtn:hover{background-color:#000000;color:#ffffff;}
+    input{text-align:center}
+</style>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.countdown.min.js"></script>
+<div class="limit_style" id="">
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul class="smallUl"></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <volist name="adslist5" id="val">
+                    <li><a href="{:U('Home/Ads/index')}" target="_blank"><div style="background:url(__PUBLIC__/Admin/Uploads/ads/{$val.adlogo}
+) no-repeat rgb(255, 227, 130); background-position:center; width:100%; height:350px;">
+                    </div></a></li>
+                </volist>
+                <!--<li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(255, 227, 130); background-position:center; width:100%; height:350px;"></div></a></li>
+                <li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(255, 227, 130); background-position:center ; width:100%; height:350px;"></div></a></li>
+                <li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(226, 155, 197); background-position:center; width:100%; height:350px;"></div></a></li>-->
+            </ul>
+        </div>
+        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+    <script type="text/javascript">
+        jQuery("#slideBox").slide({titCell:".hd ul",mainCell:".bd ul",autoPlay:true,autoPage:true});
+    </script>
+</div>
+<div id="ProductMenu" class="sw_categorys_nav">
+    <div class="container">
+        <div style="padding-left:30px;width:1000px;line-height:50px;font-size:30px;">欢迎参与投票统计 <span style="font-size:16px;">(前十名商品将参与特价活动，感谢你的到来)</span></div>
+
+    </div>
+</div>
+<div class="Inside_pages clearfix">
+    <!--限时团购-->
+    <div class="limit_style Preferential_list">
+        <div class="pic_sort clearfix" id="Area">
+
+            <volist name="salelist" id="val" key="k">
+                <if condition="$val.num eq 0">
+                    <ul class="list Complete">
+                        <div class="wc_img"></div>
+                        <li class="pic_time"><!--剩余时间 <b>06</b>小时 <b>34</b>分 <b>23</b>秒-->
+                            <div id="clock{$k}"></div>
+                            <input id="saled{$k}" type="hidden" value="{$Think.const.NOW_TIME}"/>
+                            <input id="sale{$k}" type="hidden" value="{$val['endtime']}"/>
+
+                        </li>
+                        <li class="pic_img">
+                            <a href="Limit_buy_Detailed.html"><img src="__PUBLIC__/Admin/Uploads/goods/{$val.pic}" width="300px" height="200px"></a>
+                        </li>
+                        <li class="pic_inner">
+                            <div class="btn"><a href="{:U('Home/Detail/detail',array('gid'=>$val['id']))}" class="btn_gm"></a></div>
+                            <div class="pic_Price left"><b>￥{$val.price}</b></div>
+                            <div class="Number right">
+                                <p class="Number_Price">￥{$val.marketprice}</p>
+                                <p class="pic_Number">{$val.num}件</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <else/>
+                    <ul class="list">
+                        <li class="pic_time"><!--剩余时间 <b>06</b>小时 <b>34</b>分 <b>23</b>秒-->
+                            <div id="clock{$k}"></div>
+                            <input id="saled{$k}" type="hidden" value="{$Think.const.NOW_TIME}"/>
+                            <input id="sale{$k}" type="hidden" value="{$val['endtime']}"/>
+                        </li>
+                        <li class="pic_img">
+                            <a href="{:U('Home/Detail/detail',array('gid'=>$val['id']))}"><img src="__PUBLIC__/Admin/Uploads/goods/{$val.pic}" width="300px" height="200px"></a>
+                        </li>
+                        <li class="pic_inner">
+                            <div id="sortBox">
+                                <div><span class="sp">当前排名<input readonly size="5"value="{$k}" name="sort"></span></div>
+                                <div><span class="sp">投票数量<input readonly size="5" value="{$val['votecount']}" name="sort"></span></div>
+                                <div><a href="javascript:vote({$val['aid']})" id="voteBtn">投票</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </if>
+            </volist>
+        </div>
+    </div>
+</div>
+<script>
+    //投票
+    function vote(aid){
+        $.get("{:U('Vote/addVote')}",{id:aid},function(res){
+            if(res.status=="ok"){
+                layer.msg(res.msg,{icon:1,time:2000},function(){
+                    window.location.href="{:U('Vote/showlist')}";
+                })
+            }else{
+                layer.msg(res.msg,{icon:2,time:2000});
+            }
+        })
+    }
+</script>
+<!--更改-->
+<script type="text/javascript">
+    $(function(){
+        for(var i=1;i<6;i++){
+            var t1=$('#saled'+i).val();
+            var t2=$('#sale'+i).val();
+            var t=parseInt(t2-t1)*1000;
+            var twoDaysFromNow = new Date().valueOf() +t;
+            $('#clock'+i).countdown(twoDaysFromNow, function(event) {
+                $(this).html(event.strftime( '%D 天 %H 小时 %M 分钟 %S 秒'));
+            });
+        }
+
+    })
+</script>
+

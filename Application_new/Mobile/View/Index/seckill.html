@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>我的收藏</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/style.css"/>
+    <script src="__PUBLIC__/Mobile/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="__PUBLIC__/Mobile/js/jaliswall.js"></script>
+    <script src="__PUBLIC__/Mobile/js/layer_mobile/layer.js"></script>
+    <style>
+        .contaniner .list .wall{position: relative; display: block; width: 100%; overflow: hidden; margin: 2% 0; z-index: 0;}
+        .contaniner .list .wall .pic{ width:100%; margin-bottom: 8%; float: left; background-color: #fff; padding-bottom: 3%;}
+
+        .contaniner .list .wall .pic a{ width: 100%; display: block;}
+        .contaniner .list .wall .pic img{ width: 100%;}
+        .contaniner .list .wall .pic p{ font-size: 1.45em; width: 90%; margin: 2% 5%; text-align: justify; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: #333;}
+        .contaniner .list .wall .pic b{ color: #FC605A; font-size: 1.7em; font-weight: normal; margin-right: 4%; margin-left: 4%; }
+        .contaniner .list .wall .pic del{ color: #999; font-size: 1.169em; }
+    </style>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $(".loading").addClass("loader-chanage")
+            $(".loading").fadeOut(300);
+            $('.wall').jaliswall({ item: '.pic' });
+
+            $(".text-top").on("touchstart",function(){
+                $(".collectbar").fadeToggle(500);
+            });
+        })
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+    <div class="loader">
+        <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--loading页结束-->
+<body>
+<header class="top-header fixed-header">
+    <a class="icona" href="javascript:history.go(-1)">
+        <img src="__PUBLIC__/Mobile/images/left.png"/>
+    </a>
+    <h3>抢购促销</h3>
+
+</header>
+
+<div class="contaniner fixed-conta">
+    <div style="margin-top: 3%;"></div>
+    <section class="list">
+        <ul class="wall">
+
+            <volist name="list" id="value" empty="$empty" key="k">
+                <li class="pic">
+
+                    <if condition="$time gt $value['endtime']">
+                        <a href="javascript:change({$k});">
+                            <img id="ch{$k}" src="__PUBLIC__/Admin/Uploads/goods/thumb350/350_{$value['pic']}"/></a>
+                        <else />
+                        <a href="{:U('Detail/detail',array('gid'=>$value['gid']))}">
+                            <img src="__PUBLIC__/Admin/Uploads/goods/thumb350/350_{$value['pic']}"/></a>
+                    </if>
+
+                        <p>{$value.goodsname}</p>
+                        <b>￥{$value.price}</b><del>￥{$value.marketprice}</del>
+                        <div class="collectbar">
+                            <label for="collect{$value['id']}" onselectstart="return false" class="label{$value['id']}"></label>
+                            <input type="checkbox" value="{$value['id']}" onclick="mycheck({$value['id']})" id="collect{$value['id']}"/>
+                        </div>
+
+                    <div style="width:300px;height: 70px;background: pink;margin: auto;border-radius:10px;">
+                        <div class="time" id="time{$k}" style="font-family: '微软雅黑';font-size: 24px;font-weight: bolder;line-height: 70px;text-align: center;"></div>
+                        <input type="hidden" value="{$value['endtime']}" id="endTime{$k}"/>
+                        <script>
+                            function change(id){
+                                layer.open({
+                                    content: '该宝贝已抢购完'
+                                    ,skin: 'msg'
+                                    ,time: 2 //2秒后自动关闭
+                                });
+                            }
+                            $(function(){
+                                setInterval(changTime, 1000);    //每一秒都循环一次函数
+                                function changTime(){
+                                    for(i=1;i<=9;i++){document.getElementById("time"+i).innerHTML = getTime1();}
+                                }
+                                function getTime1() {
+                                    var now = new Date().getTime(); //获取当前的
+                                    var end = ($('#endTime'+i).val()) * 1000;
+                                    var temp = end - now;
+                                    if (temp <= 0) {return "抢购已结束";}
+                                    else {
+                                        var temp2 = new Date();
+                                        temp2.setTime(temp);
+                                        var sec = Math.floor((temp) / 1000 % 60);
+                                        var min = Math.floor(temp / (60 * 1000) % 60);
+                                        var hou = Math.floor(temp / (60 * 60 * 1000) % 24);
+                                        var day = Math.floor(temp / (24 * 60 * 60 * 1000));
+                                        return day + "天 " + hou + "小时 " + min + "分钟 " + sec + "秒";
+                                    }
+                                }
+                            })
+                        </script>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </section>
+    <div class="kong" style="margin-bottom: 16%;"></div>
+</div>
+<br /><br /><br />
+<footer class="page-footer fixed-footer">
+    <ul>
+        <li class="active">
+            <a href="{:U('Index/index')}">
+                <img src="__PUBLIC__/Mobile/images/footer01.png"/>
+                <p>首页</p>
+            </a>
+        </li>
+        <li>
+            <a href="{:U('Category/cateList')}">
+                <img src="__PUBLIC__/Mobile/images/footer002.png"/>
+                <p>分类</p>
+            </a>
+        </li>
+        <li>
+            <a href="{:U('Cart/cartList')}">
+                <img src="__PUBLIC__/Mobile/images/footer003.png"/>
+                <p>购物车</p>
+            </a>
+        </li>
+        <li>
+            <a href="{:U('Personal/personalList')}">
+                <img src="__PUBLIC__/Mobile/images/footer004.png"/>
+                <p>个人中心</p>
+            </a>
+        </li>
+    </ul>
+</footer>
+</body>
+</html>

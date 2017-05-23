@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>购物车</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/style.css"/>
+    <script src="__PUBLIC__/Mobile/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__PUBLIC__/Mobile/js/layer_mobile/layer.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    	$(window).load(function(){
+    		$(".loading").addClass("loader-chanage")
+    		$(".loading").fadeOut(300)
+    	})
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+	<div class="loader">
+        <div class="loader-inner pacman">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+	</div>
+</div>
+<!--loading页结束-->
+<body>
+	<header class="page-header">
+		<h3>购物车</h3>
+	</header>
+    <form action="{:U('Order/createOrder')}" method="post" id="form1">
+        <input type="hidden" name="totalPrice" value="" id="totalPrice">
+	<div class="contaniner fixed-contb" style="margin:0 auto;">
+        <volist name="cartList" id="value" key="k" empty="空空如也">
+		<section class="shopcar" style="margin:0 auto;">
+			<div class="shopcar-checkbox">
+				<!--<label for="shopcar{$k}" ></label>-->
+				<!--<input name="chk[]" type="checkbox" id="shopcar{$k}" value="{$value['gid']}"/>-->
+                <label></label>
+                <input name="chk[]" type="checkbox" value="{$value['gid']}"/>
+			</div>
+			<figure><img src="__PUBLIC__/Admin/Uploads/goods/{$value['pic']}"/></figure>
+			<dl>
+				<dt>{$value['goodsname']}</dt>
+				<!--<dd>颜色：经典绮丽款</dd>-->
+				<div class="add">
+					<span onclick="jian({$k})">-</span>
+					<input name="buynum{$value['gid']}" class="num" id="buynum{$k}" type="text" value="{$value['buynum']}" />
+					<span onclick="jia({$k})">+</span>
+				</div>
+                <input id="xj" type="hidden" class="xj" value="">
+				<h3><span>单价:</span><span class="price">{$value['price']}</span></h3>
+				<small><a href="javascript:del({$value['gid']})"><img src="__PUBLIC__/Mobile/images/shopcar-icon01.png"/></a></small>
+			</dl>
+		</section>
+		<!--去结算-->
+		<div style="margin-bottom: 10px;"></div>
+        </volist>
+	</div>
+
+	<footer class="page-footer fixed-footer">
+		<div class="shop-go">
+			<b>合计：<em id="total"></em></b>
+			<span><a href="javascript:topay()">去结算（{$num}）</a></span>
+		</div>
+		<ul>
+			<li>
+				<a href="{:U('Index/index')}">
+					<img src="__PUBLIC__/Mobile/images/footer001.png"/>
+					<p>首页</p>
+				</a>
+			</li>
+			<li>
+				<a href="{:U('Category/cateList')}">
+					<img src="__PUBLIC__/Mobile/images/footer002.png"/>
+					<p>分类</p>
+				</a>
+			</li>
+			<li class="active">
+				<a href="{:U('Cart/cartList')}">
+					<img src="__PUBLIC__/Mobile/images/footer03.png"/>
+					<p>购物车</p>
+				</a>
+			</li>
+			<li>
+				<a href="javascript:islogin()">
+					<img src="__PUBLIC__/Mobile/images/footer004.png"/>
+					<p>个人中心</p>
+				</a>
+			</li>
+		</ul>
+	</footer>
+    </form>
+    <input type="hidden" value="{$Think.session.mid}" id="mid">
+    <script type="text/javascript">
+        $(".shopcar-checkbox label").on('touchstart',function(){
+            if($(this).hasClass('shopcar-checkd')){
+//                $(".shopcar-checkbox label").removeClass("shopcar-checkd")
+//               $(".shopcar-checkbox label").next().attr("checked",false)
+                $(this).removeClass("shopcar-checkd")
+                $(this).next().attr("checked",false)
+            }else{
+//                $(".shopcar-checkbox label").addClass("shopcar-checkd")
+//                $(".shopcar-checkbox label").next().attr("checked","checked")
+                $(this).addClass("shopcar-checkd")
+                $(this).next().attr("checked","checked")
+            }
+            getprices();
+            gettotalprice();
+        })
+        //加
+        function jia(n){
+            var num=document.getElementById("buynum"+n).value;
+            num++;
+            document.getElementById("buynum"+n).value=num;
+            getprices();
+            gettotalprice();
+        }
+        //减
+        function jian(n){
+            var num=document.getElementById("buynum"+n).value;
+            num--;
+            if(num  <= 1){
+                num=1;
+            }
+            document.getElementById("buynum"+n).value=num;
+            getprices();
+            gettotalprice();
+        }
+        //小计
+        function getprices(){
+            var nums=document.getElementsByClassName('num');
+            var price=document.getElementsByClassName('price');
+            var prices=document.getElementsByClassName('xj');
+            for(var i=0;i<price.length;i++){
+                prices[i].value=(parseFloat(price[i].innerHTML)*parseFloat(nums[i].value)).toFixed(2);
+            };
+        }
+        //总计
+        function gettotalprice(){
+            getprices();
+            var inputs=document.getElementsByName('chk[]');
+            var prices=document.getElementsByClassName('xj');
+            var totalprice=0;
+           // console.log($(inputs[0]).attr('checked'));
+            for(var i=0;i<inputs.length;i++){
+                if($(inputs[i]).attr('checked')){
+                    totalprice+=parseFloat(prices[i].value);
+                }
+            };
+            document.getElementById('total').innerHTML='￥'+totalprice;
+            document.getElementById('totalPrice').value=totalprice;
+        }
+        gettotalprice();
+        //去结算，判断用户是否登陆
+        function topay(){
+            var mid=document.getElementById("mid").value;
+            if(mid){
+                $.post("{:U('Order/createOrder')}",$("#form1").serialize(),function(res){
+                    if(res.status=="ok"){
+                        layer.open({
+                            content:res.msg
+                            ,btn: "去付款"
+                            ,yes:function(index){
+                                location.href="{:U('Order/orderList')}?oid="+res.oid
+                                layer.close(index);
+                            }
+                        });
+                    }else{
+                        layer.open({
+                            content: res.msg
+                            ,btn: '我知道了'
+                        });
+                    }
+                })
+            }else{
+                layer.open({
+                    content:"登陆后才能结算"
+                    ,btn: ['去登陆','再逛逛']
+                    ,yes:function(index){
+                        location.href="{:U('Cart/tologin')}";
+                        layer.close(index);
+                    }
+                });
+            }
+
+        }
+        //删除
+        function del(gid){
+            layer.open({
+                content: '您确定要删除我吗？'
+                ,btn: ['确定', '取消']
+                ,yes: function(index){
+                    $.get("{:U('Cart/del')}",{gid:gid},function(res){
+                        if(res.status=="ok"){
+                            //提示
+                            layer.open({
+                                content: res.msg
+                                ,time:2
+                                ,end:function(index){
+                                    location.href="{:U('Cart/cartList')}";
+                                    layer.close(index);
+                                }
+                            });
+                        }else{
+                            //信息框
+                            layer.open({
+                                content: res.msg
+                                ,btn: '我知道了'
+                            });
+                        }
+                    })
+                    layer.close(index);
+                }
+            });
+        }
+    </script>
+    <script>
+        //判断用户是否登陆
+        function islogin(){
+            var mid=$("#mid").val();
+            if(mid){
+                location.href="{:U('Personal/personalList')}";
+            }else{
+                //信息框
+                layer.open({
+                    content:"登陆后才能进入"
+                    ,btn: ['去登陆','再逛逛']
+                    ,yes:function(index){
+                        location.href="{:U('Login/login')}";
+                        layer.close(index);
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+</html>

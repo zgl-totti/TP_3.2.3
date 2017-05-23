@@ -1,0 +1,25 @@
+#pageBody input{width:15px;height: 15px;}
+.box{width:1200px;margin:0px auto;}
+.select_title{width: 120px;height:35px;line-height:35px; border-radius:8px 8px 0px 0px;border:1px solid #DFDFDF;border-bottom:0 none;background-color:#F9F9F9; position:relative;text-align: center;font-size: 14px;color:#444; font-weight:700;}
+.day_list tr{height:32px;line-height:32px;text-align:left;}
+.day_list thead{background-color:#676767;color: #fff;font-size: 12px;}
+.day_list .xuhao{width:3%;text-align: center;}
+.day_list .username{width:12%;}
+.day_list .userlogin{width:12%;}
+.day_list .userpv{width:8%;}
+.day_list .usertime{width:12%;}
+.day_list .userip{width:8%;}
+.day_list .websort{width:8%;}
+.day_list tbody td{border-bottom: 1px solid #E5E5E5}
+#pageBody a{ color:#00A3EC}
+#pageBody a:hover{ color:#444!important}
+.listpage{ padding:20px 0; text-align:center;}
+.listpage a{ padding:5px 10px;  text-align:center; border:solid 1px #CCCCCC;}
+.listpage span{ margin:0 10px;}
+.listpage input{ width:30px; margin:0 5px; border:solid 1px #CCCCCC;}
+.current{ background-color:#90b831; color:#FFFFFF;}
+#buy .tobuy{background: #fb9e4e;color:#fff;margin:0 50px; }
+#buy .tobuy:hover{background: #E85517;color: #fff;}
+#buy{height:80px; text-align: right;font-size: 16px}
+#buy b{font-weight: bold;font-size: 24px;color:red;}
+#buy a{display: inline-block;width: 100px;height:30px;line-height:30px;text-align: center;color:white;font-size: 20px;font-weight: bold;border-radius:8px; padding: 5px 10px;cursor: pointer;}

@@ -1,0 +1,57 @@
+<layout name="Public/layout"/>
+
+<style>
+    #footPage{width: 300px;height: 50px; float: right}
+    #footPage span{display:inline-block;width:30px;height:30px;margin-left:10px;background-color:#D86C01;text-align:center;margin-top:10px;line-height:30px;font-size:10px;}
+    #footPage a{display:inline-block;width:30px;height:30px;margin-left:10px;background-color:#D86C01;text-align:center;margin-top:10px;line-height:30px;}
+</style>
+<div class="i_bg bg_color">
+    <!--Begin 用户中心 Begin -->
+    <div class="user_style clearfix">
+        <div class="user_center">
+    <div class="m_content">
+        <include file="Public/user_left"/>
+        <div class="right_style">
+            <div class="info_content">
+                <div class="collect_style r_user_style">
+                    <div class="title_Section"><span>用户收藏</span></div>
+                    <div class="collect">
+                        <ul class="Quantity"><li>已藏量：{$collectnum}条</li><li></li></ul>
+                        <div class="collect_list">
+                            <ul>
+                                <volist name="list" id="val" key="k" empty="$empty">
+                                <li class="collect_p">
+                                    <a href="javascript:collectdel({$val['id']});"><em class="iconfont icon-close2 delete"></em></a>
+                                    <a href="{:U('Detail/detail',array('gid'=>$val['gid']))}" class="buy_btn">查看详情</a>
+                                    <div class="collect_info">
+                                        <div class="img_link"> <a href="#" class="center "><img src="__PUBLIC__/Admin/Uploads/goods/thumb350/350_{$val['pic']}"></a></div>
+                                        <dl class="xinxi">
+                                            <dt><a href="#" class="name">{$val.goodsname}</a></dt>
+                                            <dd><span class="Price"><b>￥</b>{$val.price}</span><span class="collect_Amount"><i class="iconfont icon-shoucang"></i>{$val.salenum}</span></dd>
+                                        </dl>
+                                    </div>
+                                </li>
+                                </volist>
+                            </ul>
+                        </div>
+                        <div id="footPage">{$page}</div>
+                    </div>
+                             </div>
+                         </div>
+                     </div>
+               </div>
+         </div>
+    </div>
+</div>
+
+<script>
+    function collectdel(cid){
+        $.get("{:U('Personal/collectdel')}","cid="+cid,function(res){
+            if(res.status==1){
+                layer.msg(res.msg,{icon:6,time:500},function(){
+                    window.location.href="{:U('Personal/collection')}";
+                })
+            }else if(res.status==0){layer.msg('删除失败',{icon:5,time:1000});}
+        })
+    }
+</script>

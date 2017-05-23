@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>兑换详情</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/swiper.min.css"/>
+      <script src="__PUBLIC__/Mobile/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    	$(window).load(function(){
+    		$(".loading").addClass("loader-chanage")
+    		$(".loading").fadeOut(300)
+    	})
+
+        function collect(gid){
+            $.get("{:U('Integral/collect')}","gid="+gid,function(res){
+                if(res.status==1) {
+                    layer.open({content: res.msg, skin: 'msg', time: 2})
+                    $('.collect img').attr("src", "__PUBLIC__/Mobile/images/detail-heart-lv.png")}
+                else if(res.status==2){layer.open({content: res.msg, skin: 'msg', time: 2})}
+                else{layer.open({content: res.msg, skin: 'msg', time: 2})}
+            })
+        }
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+	<div class="loader">
+        <div class="loader-inner pacman">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+	</div>
+</div>
+<!--loading页结束-->
+<body>
+	<header class="detail-header fixed-header">
+		<a href="javascript:history.go(-1)"><img src="__PUBLIC__/Mobile/images/detail-left.png"/></a>
+		<a href="{:U('Cart/cartList')}" class="right"><img src="__PUBLIC__/Mobile/images/shopbar.png"/></a>
+	</header>
+    <form action="{:U('Order/integral')}" method="post" id="form2">
+	<div class="contaniner fixed-contb">
+		<section class="detail">
+			<figure class="swiper-container">
+				<ul class="swiper-wrapper">
+                    <!--第一栏图片-->
+                    <volist name="goodspic" id="value" key="k">
+                        <li class="swiper-slide">
+                                <img src="__PUBLIC__/Admin/Uploads/goods/{$value['picname']}"/>
+                        </li>
+                    </volist>
+                    <!--end-->
+				</ul>
+				<div class="swiper-pagination">
+				</div>
+			</figure>
+
+            <!--相关商品介绍-->
+			<dl class="jiage">
+				<dt>
+					<h3>{$list.goodsname|mb_substr = 0,20,'utf-8'}</h3>
+
+
+                <div class="collect">
+
+                    <if condition="$cid neq null">
+                        <a href="javascript:collect({$gid})">
+                            <img src="__PUBLIC__/Mobile/images/detail-heart-lv.png"/>
+                            <p>收藏</p>
+                        </a>
+                        <else />
+                        <if condition="$Think.session.mid neq null">
+                            <a href="javascript:collect({$gid})">
+                                <img src="__PUBLIC__/Mobile/images/detail-heart-hei.png"/>
+                                <p>收藏</p>
+                            </a>
+                            <else />
+                            <a href="{:U('Integral/tologin',array('gid'=>$list['id']))}">
+                                <img src="__PUBLIC__/Mobile/images/detail-heart-hei.png"/>
+                                <p>收藏</p>
+                            </a>
+                        </if>
+                    </if>
+                </div>
+
+
+				</dt>
+				<dd>
+                    <input name="price" type="hidden" value="{$list['price']*10|floor}">
+					<b>{$list['price']*10|floor}积分</b>
+					<input type="button" value="包邮" readonly />
+                    <small>购买数量  </small>
+                    <a style="display:inline-block;line-height:40px;width:40px;height:40px;background-color:#999;text-align:center" class="btn-reduce" id="jia" href="javascript:jian()" >-</a>
+                    <input style="width: 50px;border:0px;text-align:center" readonly class="text" name="buynum" id="buy-num" value="1" onkeyup="setAmount.modify('#buy-num');">
+                    <a style="display:inline-block;line-height:40px;width:40px;height:40px;background-color:#999;text-align:center" class="btn-add" id="jian" href="javascript:jia();">+</a>
+                    <input id="gid" name="gid" type="hidden" value="{$value.gid}"/><!--为购物流程保存的商品id-->
+				</dd>
+                <script type="text/javascript">
+                 //加
+                    function jia(){
+                        var num=document.getElementById("buy-num").value;
+                        num++;
+                        if(num > {$list['num']}){
+                            num={$list['num']};
+                        }
+                        document.getElementById("buy-num").value=num;}
+                    //减
+                    function jian(){
+                        var num=document.getElementById("buy-num").value;
+                        num--;
+                        if(num  <= 1){num=1;}
+                        document.getElementById("buy-num").value=num;
+                    }
+                </script>
+			</dl>
+            <!--end-->
+			<!--判断用户是否登陆状态-->
+            <if condition="$mid neq null">
+                <a href="{:U('Integral/integral')}" class="seven"><b>查看我的积分</b></a>
+                <else />
+                <a href="{:U('Login/login')}" class="seven"><b>查看当前积分</b></a>
+            </if>
+			<!--end-->
+			<ul class="same">
+                <span>同类推荐</span>
+                <volist name="integral" id="value" key="k">
+                    <a href="{:U('Integral/detail',array('gid'=>$value['id']))}">
+                        <li class="one" style="margin: 0 4px;">
+                            <img src="__PUBLIC__/Admin/Uploads/goods/{$value['pic']}"/>
+                            <p>￥{$value.price}</p>
+                        </li>
+                    </a>
+                </volist>
+			</ul>
+			<article class="detail-article">
+				<nav>
+					<ul class="article">
+						<li id="talkbox1" class="article-active">商品详情</li>
+						<li id="talkbox2">评价</li>
+					</ul>
+				</nav>
+                <!--商品详情-->
+                <section class="talkbox1">
+                    <volist name="goodspic" id="val">
+                        <div >
+                            <img src="__PUBLIC__/Admin/Uploads/goods/thumb350/350_{$val['picname']}" style="margin-left: 250px;"/>
+                        </div>
+                    </volist>
+                    <div style="margin-top: 10px;text-align: center;">产品描述:{$list.description}</div>
+                </section>
+                <!--end-->
+
+                <section class="talkbox2" style="display: none;">
+                    <ul class="talk">
+                        <volist name="comment" id='value' empty="$empty">
+                            <li>
+                                <figure>
+                                    <if condition="$value['pic'] neq null">
+                                        <img src="__PUBLIC__/Admin/Uploads/member/thumb100/100_{$value['pic']}"/>
+                                        <else />
+                                        <img src="__PUBLIC__/Mobile/images/null.gif"/>
+                                    </if>
+                                </figure>
+                                <dl>
+                                    <dt>
+                                    <p>{$value.username}</p>
+                                    <time>{:date('Y-m-d H:i:s',$value['addtime'])}</time>
+                                    <if condition="$value['start'] neq null">
+                                        <div class="star">
+                                            <for start="0" end="$value['start']" >
+                                                <span><img src="__PUBLIC__/Mobile/images/detail-iocn01.png"/></span>
+                                            </for>
+                                            <for start="$value['start']" end="5" >
+                                                <span><img src="__PUBLIC__/Mobile/images/detail-iocn001.png"/></span>
+                                            </for>
+                                        </div>
+                                    </if>
+                                    </dt>
+                                    <dd>{$value.commentcontent}</dd>
+                                    <volist name="value['picname']" id="v" empty="">
+                                        <img src="__PUBLIC__/Admin/Uploads/comments/{$v['picname']}" style="width: 70px;height: 70px;float: left;margin-left: 5px;">
+                                    </volist>
+                                </dl>
+                            </li>
+                        </volist>
+                    </ul>
+                </section>
+				
+			</article>
+		</section>
+	</div>
+	
+	
+		<footer class="detail-footer fixed-footer">
+			<!--<a href="#" class="go-car">
+				<input type="button" value="加入购物车"/>
+			</a>-->
+			<a href="javascript:addToBuy()" style="width:100%;margin:0 auto;" class="buy">
+				立即兑换
+			</a>
+		</footer>
+        </form>
+    <input type="hidden" value="{$Think.session.mid}" id="mid">
+    <script src="__PUBLIC__/Mobile/js/layer_mobile/layer.js" type="text/javascript"></script>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$(window).scroll(function() {
+	    if ($(".detail-header").offset().top > 50) {
+        $(".detail-header").addClass("change");
+    } else {
+        $(".detail-header").removeClass("change");
+    }
+	});
+</script>
+<script src="__PUBLIC__/Mobile/js/swiper.min.js"></script>
+<script type="text/javascript">
+		$(document).ready(function(){
+			var mySwiper = new Swiper('.swiper-container',{
+				    loop: true,
+				    speed:1000,
+					autoplay: 2000,
+					pagination: '.swiper-pagination',
+				  });
+		})
+	</script>
+<script type="text/javascript">
+	$(function(){
+		$('.chose li').click(function(){
+				
+			$(this).addClass('chose-active').siblings().removeClass('chose-active');
+
+			var tags=document.getElementsByClassName('chose-active');//获取标签
+
+			var tagArr = "";
+	        for(var i=0;i < tags.length; i++)
+	        {
+	            tagArr += tags[i].innerHTML;//保存满足条件的元素
+
+	        }
+	       
+	        $('#sss').html(tagArr);
+
+		});
+
+		$('.article li').click(function(){
+
+			$(this).addClass('article-active').siblings().removeClass('article-active');
+			if($(this).attr("id")=="talkbox1"){
+				$('.talkbox1').show();
+				$('.talkbox2').hide();
+			}else{
+				$('.talkbox2').show();
+				$('.talkbox1').hide();
+			}
+
+		});	
+	});
+    //立即兑换
+    function addToBuy(){
+        var mid=document.getElementById("mid").value;
+        var gid=document.getElementById("gid").value;
+        if(mid){
+            $.post("{:U('Order/integral')}",$("#form2").serialize(),function(res){
+                if(res.status=="ok"){
+                    layer.open({
+                        content: res.msg
+                        ,btn: ['去兑换']
+                        ,yes: function(index){
+                            location.href="{:U('Order/integralOrder')}?oid="+res.oid
+                            layer.close(index);
+                        }
+                    });
+                }else{
+                    layer.open({
+                        content: res.msg
+                        ,btn: '我知道了'
+                    });
+                }
+            })
+        }else{
+            layer.open({
+                content:"登陆后才能兑换"
+                ,btn: ['去登陆','再逛逛']
+                ,yes:function(index){
+                    location.href="{:U('Integral/tologin')}?gid="+gid;
+                    layer.close(index);
+                }
+            });
+        }
+
+    }
+</script>
+</body>
+</html>

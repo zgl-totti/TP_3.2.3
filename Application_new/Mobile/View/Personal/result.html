@@ -1,0 +1,46 @@
+<section class="order">
+    <volist name="list" id="value">
+        <dl>
+            <dt>
+                <time>订单编号:{$value["order_syn"]}</time><br/>
+                <time>下单时间:{:date("Y-m-d",$value["addtime"])}</time>
+                <span>{$value['status']["status_name"]}</span>
+            </dt>
+            <volist name="value['goods']" id="val">
+                <ul>
+                    <a href="detail.html">
+                        <figure><img src="__PUBLIC__/Admin/Uploads/goods/{$val['pic']}"/></figure>
+                        <li>
+                            <p>{$val['goodsname']}</p>
+                            <!--<small>颜色：经典绮丽款</small>
+                            <span>尺寸：XL</span>-->
+                            <b>￥{$val['price']}</b>
+                            <strong>×{$val['buynum']}</strong>
+                        </li>
+                    </a>
+                </ul>
+            </volist>
+            <dd>
+                <h3>商品总额</h3>
+                <i>￥{$value["order_price"]}</i>
+            </dd>
+            <dd>
+                <if condition="$value['status']['id'] eq 1">
+                    <input onclick="topay({$value['id']})" id="pay" type="button" value="{$value['status']['member_opt']}" class="order-que"/>
+                    <elseif condition="$value['status']['id'] eq 2"/>
+                    <input type="button" value="{$value['status']['member_opt']}" class="order-que"/>
+                    <elseif condition="$value['status']['id'] eq 3"/>
+                    <input onclick="confirm({$value['id']})" id="confirm" type="button" value="{$value['status']['member_opt']}" class="order-que"/>
+                    <elseif condition="$value['status']['id'] eq 4"/>
+                    <input onclick="comment({$value['id']})" id="comment" type="button" value="{$value['status']['member_opt']}" class="order-que"/>
+                    <elseif condition="$value['status']['id'] eq 5"/>
+                    <input type="button" value="{$value['status']['member_opt']}" class="order-que"/>
+                </if>
+                <!--<input type="button" value="查看物流" onclick="javascript:location.href='wuliu.html'" />-->
+                <input type="button" value="删除订单" />
+            </dd>
+        </dl>
+    </volist>
+</section>
+<div id="orderPage">{$page}</div>
+<input name="where" value="{$where}" id="where">

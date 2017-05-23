@@ -1,0 +1,17 @@
+.box{width:1200px;margin:0px auto;}
+.pxtitle{ overflow:hidden;_height:30px; border-top:solid 2px #cc0404; background-color:#f2f2f2; padding:12px 30px;margin:20px 0;}
+.pxtitle a{ padding:6px 15px; height:30px; line-height:30px; background-color:#c2a07a; color:#FFFFFF; text-align:center;border-radius:5px; }
+.pxtitle a.active{background-color: #C91623}
+.pxtitle span{ float:right; line-height:24px;}
+.pxlistcon{ width:1200px;}
+.pxlistcon li{ float: left; width: 238px;height: 285px; margin:10px 0px 10px 0px;border: 1px solid #eee;text-align: center;}
+.pxlistcon img{ position: relative; width: 230px; height: 230px; border: 0;}
+.pxlistcon img:hover{ top:-1;left:-2;}
+.pxlistcon a{font: bold 13px "微软雅黑";color: #333;}
+
+.pxlistcon a:hover{color: #f00;}
+
+.pxlistcon p{ display: inline-block; padding: 4px 0; margin-top: 4px; width: 90%;border-top:1px dotted #ccc;color:#d00; font-weight: bold; font-size: 14px;}
+a{ color: #333;text-decoration: none;}
+a:hover{ color:rgb(144, 184, 48)}
+.pxtitle a:hover{color:white;}

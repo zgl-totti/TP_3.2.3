@@ -1,0 +1,183 @@
+
+<layout name="Public/layout"/>
+    <style>
+        body{ margin:0; padding:0; font-size:12px; font-family:"Microsoft YaHei"; line-height:25px; color:#555555;}
+        div,table{ margin:0 auto;}
+        a{ color:#555555; text-decoration:none; cursor:pointer;}
+        a:hover{ color:#ff4e00; text-decoration:none; cursor:pointer;}
+        img{border:0;}
+        .i_bg{ width:100%; min-width:1200px; overflow:hidden;}
+        .bg_color{background-color:#f6f6f6;}
+        .m_content{width:1210px; overflow:hidden; margin-top:20px;}
+        .m_left{width:211px; overflow:hidden; padding:5px; float:left;}
+        .left_n{height:35px; line-height:35px; overflow:hidden; background:url(__PUBLIC__/Home/images/sp/m_t.png) no-repeat 31px center; background-color:#090909; color:#FFF; font-size:14px; text-indent:68px; margin-bottom:10px;}
+        .left_m{overflow:hidden; background-color:#FFF; padding-bottom:20px; margin-bottom:10px; -webkit-box-shadow:0 0 5px #e0e0e0; -moz-box-shadow:0 0 5px #e0e0e0; box-shadow:0 0 5px #e0e0e0;}
+        .left_m_t{height:35px; line-height:35px; overflow:hidden; color:#3e3e3e; font-size:14px; text-indent:68px; margin-bottom:10px; border-bottom:1px solid #e2e2e2;}
+        .t_bg1{background:url(__PUBLIC__/Home/images/sp/m_i_1.png) no-repeat 31px center;}
+        .t_bg2{background:url(__PUBLIC__/Home/images/sp/m_i_2.png) no-repeat 31px center;}
+        .t_bg3{background:url(__PUBLIC__/Home/images/sp/m_i_3.png) no-repeat 31px center;}
+        .t_bg4{ background:url(__PUBLIC__/Home/images/sp/m_i_4.png) no-repeat 31px center;}
+        .left_m ul li{height:28px; line-height:28px; overflow:hidden; color:#3e3e3e; text-indent:68px;}
+        .left_m ul li a{color:#3e3e3e;}
+        .left_m ul li a:hover, .left_m ul li a.now{ color:#ff4e00;}
+        .m_right{width:970px; height:auto !important; min-height:540px; height:737px; background-color:#FFF; float:right; display:inline; margin:5px; padding-bottom:50px; -webkit-box-shadow:0 0 5px #e0e0e0; -moz-box-shadow:0 0 5px #e0e0e0; box-shadow:0 0 5px #e0e0e0;}
+        .m_des{overflow:hidden; margin-top:45px; padding-bottom:30px; margin-bottom:20px; border-bottom:1px dotted #b6b6b6;}
+        .m_user{ height:20px; line-height:20px; overflow:hidden; color:#3e3e3e; font-size:14px; font-weight:bold; }
+        .m_notice{ height:35px; line-height:35px; overflow:hidden; background:url(__PUBLIC__/Home/images/sp/n_not.png) no-repeat left center; padding-left:32px;}
+        .mem_t{ width:870px; height:50px; line-height:50px; overflow:hidden; color:#333333; font-size:16px;}
+    </style>
+
+<div class="i_bg bg_color">
+    <!--Begin 用户中心 Begin -->
+    <div class="m_content">
+        <div class="m_left">
+            <div class="left_n">管理中心</div>
+            <div class="left_m">
+                <div class="left_m_t t_bg2">会员中心</div>
+                <ul>
+                    <li><a href="memberInfo.html">用户信息</a></li>
+                    <li><a href="collection.html">我的收藏</a></li>
+                    <li><a href="point.html">我的积分</a></li>
+                    <li><a href="comment.html">我的评论</a></li>
+                </ul>
+            </div>
+            <div class="left_m">
+                <div class="left_m_t t_bg1">订单中心</div>
+                <ul>
+                    <li><a href="order.html">我的订单</a></li>
+                    <li><a href="address.html">收货地址</a></li>
+                </ul>
+            </div>
+
+            <div class="left_m">
+                <div class="left_m_t t_bg4">购物中心</div>
+                <ul>
+                    <li><a href="Member_Member.html">购物车</a></li>
+                </ul>
+            </div>
+            <div class="left_m">
+                <div class="left_m_t t_bg3">账户中心</div>
+                <ul>
+                    <li><a href="Member_Safe.html">账户安全</a></li>
+                    <li><a href="Member_Packet.html">我的红包</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="m_right">
+
+            <!--右侧内容样式-->
+            <div class="right_style">
+                <div class="info_content">
+                    <div class="Notice"><span>系统最新公告:</span>为了更好地服务于【每日鲜】的会员朋友及读者 发表意见。</div>
+                    <div class="user_info">
+                        <ul class="">
+                            <li class="Balance" style="width: 170px;"><a href="#"><img src="__PUBLIC__/Home/images/user_img_05.png" /><h4>余额：￥54.00</h4></a></li>
+                            <li class="Order_form" style="width: 170px;"><a href="#"><img src="__PUBLIC__/Home/images/user_img_04.png" /><h4>订单：(5)</h4></a></li>
+                            <li class="grade" style="width: 170px;"><a href="#"><img src="__PUBLIC__/Home/images/user_img_08.png" /><h4>3</h4></a></li>
+                            <li class="Favorable" style="width: 170px;"><a href="#"><img src="__PUBLIC__/Home/images/user_img_07.png" /><h4>钻石会员</h4></a></li>
+                            <li class="integral" style="width: 170px;"><a href="#"><img src="__PUBLIC__/Home/images/user_img_06.png" /><h4>234分</h4></a></li>
+                        </ul>
+                    </div>
+                    <!--样式-->
+                    <div class="user_info_p_s  clearfix">
+                        <!--订单记录-->
+                        <div class="left_user_cont">
+                            <div class="us_Orders left clearfix">
+                                <div class="Orders_name">
+                                    <div class="title_name">
+                                        <div class="Records">购买记录</div>
+                                        <div class="right select">
+                                            只记录你最近30天的购买记录   </div>
+                                    </div>
+                                </div>
+                                <table>
+                                    <thead>
+                                    <tr>
+                                        <th>产品名称</th>
+                                        <th>数量</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="img_link">
+                                            <a href="#" class="img"><img src="__PUBLIC__/Home/images/products/p_58.jpg" width="80" height="80"></a>
+                                            <a href="#" class="title">雅诗兰黛（Estee Lauder）弹性紧实柔肤眼霜15ml(又名弹性紧实眼霜)（提拉紧致 保湿补水 淡化细纹）</a>
+                                        </td>
+                                        <td>2</td>
+                                        <td>完成</td>
+                                        <td><a href="#" class="View">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="img_link">
+                                            <a href="#" class="img" title="山东红富士苹果"><img src="__PUBLIC__/Home/images/products/p_2.jpg" width="80" height="80"></a>
+                                            <i class="icon-copy"></i>
+                                            <a href="#" class="img" title="进口澳洲苹果"><img src="__PUBLIC__/Home/images/products/p_3.jpg" width="80" height="80"></a>
+                                            <i class="icon-copy"></i>
+                                            <a href="#" class="img" title="进口水果"><img src="__PUBLIC__/Home/images/products/p_4.jpg" width="80" height="80"></a>
+                                        </td>
+                                        <td>2</td>
+                                        <td>完成</td>
+                                        <td><a href="#" class="View">查看</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="img_link">
+                                            <a href="#" class="img" title="山东红富士苹果"><img src="__PUBLIC__/Home/images/products/p_2.jpg" width="80" height="80"></a>
+                                            <i class="icon-copy"></i>
+                                            <a href="#" class="img" title="进口水果"><img src="__PUBLIC__/Home/images/products/p_24.jpg" width="80" height="80"></a>
+                                        </td>
+                                        <td>2</td>
+                                        <td>完成</td>
+                                        <td><a href="#" class="View">查看</a></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <div class="us_jls">共2条记录</div>
+                            </div>
+                        </div>
+                        <!--右侧记录样式-->
+                <div class="right_user_recording">
+                    <div class="us_Record">
+                        <div id="Record_p" class="Record_p">
+                            <div class="title_name"><span class="name left">浏览历史</span><span class="pageState right"><span>1</span>/7</span></div>
+                            <div class="hd"><a class="next">&lt;</a><a class="prev">&gt;</a></div>
+                            <div class="bd">
+                                <ul >
+                                    <li class="clone">
+                                    <div class="p_width">
+                                        <div class="pic"><a href=""><img src="__PUBLIC__/Home/images/products/P_1.jpg"></a></div>
+                                        <div class="title"><a href="#">金龙鱼 东北大米 蟹稻共生 盘锦大米5KG</a></div>
+                                        <div class="Purchase_info"><span class="p_Price">￥32.50</span> <a href="#" class="Purchase">立即购买</a></div>
+                                    </div>
+                                </li>
+                                    <li class="clone">
+                                        <div class="p_width">
+                                            <div class="pic"><a href=""><img src="__PUBLIC__/Home/images/products/P_1.jpg"></a></div>
+                                            <div class="title"><a href="#">杨晶一号</a></div>
+                                            <div class="Purchase_info"><span class="p_Price">￥32.50</span> <a href="#" class="Purchase">立即购买</a></div>
+                                        </div>
+                                    </li>
+                                    <li class="clone">
+                                        <div class="p_width">
+                                            <div class="pic"><a href=""><img src="__PUBLIC__/Home/images/products/P_1.jpg"></a></div>
+                                            <div class="title"><a href="#">杨晶二号</a></div>
+                                            <div class="Purchase_info"><span class="p_Price">￥32.50</span> <a href="#" class="Purchase">立即购买</a></div>
+                                        </div>
+                                    </li>
+                                </ul></div>
+                        </div>
+                        <script type="text/javascript">
+                            $("#Record_p").slide({ mainCell:".bd ul",effect:"leftLoop",vis:1,autoPlay:false });
+                        </script>
+                    </div>
+                </div>
+                <!--结束-->
+                    </div>
+                </div>
+    </div>
+    </div>
+        </div>
+    </div>
+    <!--End 用户中心 End-->
+

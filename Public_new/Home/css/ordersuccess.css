@@ -1,0 +1,22 @@
+#cart td{border: 0;text-align: left;color: #666;font-size: 16px;}
+/* 添加 */
+/*公共CSS样式*/
+*{margin:0;padding: 0;}
+body{font-size:12px;font-family: "微软雅黑";color:#333;}
+img{border:0;}
+ul,ol,li{list-style-type:none; outline: none;}
+.lf{float: left;}
+.rf{float:right;}
+/*清浮动*/
+.clearfix:after{content:"";display:block;clear:both;}
+.clearfix{zoom:1;}
+a{font-size:12px;color:#666;text-decoration: none;}
+a:hover{color:#C91623;}
+.box{width:1200px;margin:0px auto;}
+.pxlistcon{ width:1200px;}
+.pxlistcon li{float: left;width: 238px;height: 285px;margin:10px 0px 10px 0px;border: 1px solid #eee;text-align: center;}
+.pxlistcon img{position: relative;width: 230px;height: 230px;border: 0;}
+.pxlistcon img:hover{top:-1px;left:-2px;}
+.pxlistcon a{font: bold 13px "微软雅黑";color: #333;}
+.pxlistcon a:hover{color: #f00;}
+.pxlistcon p{display: inline-block;padding: 4px 0;margin-top: 4px;width: 90%;border-top:1px dotted #ccc;color:#d00;font-weight: bold; font-size: 14px;}

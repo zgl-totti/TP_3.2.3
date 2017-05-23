@@ -1,0 +1,121 @@
+
+<layout name="Public/layout"/>
+<style>
+    .divcont{width:1200px;margin:0 auto;height:1050px;padding-top:30px;}
+    .dibbox{width:1000px;height:406px;margin:0 auto;border:1px solid #FF7200;border-top:2px solid #FF7200}
+    .mapbox{width:1000px;height:500px;margin:0 auto;}
+    .divlines{height:50px;line-height:50px;width:100%;border-bottom:1px solid #FF7200;border-left:1px solid #FF7200;border-right:1px solid #FF7200;}
+    .line1{width:28%;height:100%;float:left;text-align:center;font-size:20px;border-right:1px solid #FF7200;}
+    .line2{width:66%;height:100%;float:left;font-size:20px;padding-left:20px;}
+    .title{height:100%;width:80%;font-size:30px;color:#FF7200;padding-left:50px;}
+</style>
+<style type="text/css">
+    body{margin: 0; padding: 0; font:12px/1 "Microsoft Yahei", "微软雅黑", sans-serif;}
+    p, span {
+        font-family: 'Microsoft Yahei'!important;
+    }
+</style>
+<div class="divcont">
+    <div class="dibbox">
+        <div class="divlines">
+            <div class="title">欢迎来到 中国-鲜盟网，很高兴为你服务</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">商城名称</div>
+            <div class="line2">中国-鲜盟网</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">客服经理</div>
+            <div class="line2">可爱而又美丽的杨晶</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">联系方式</div>
+            <div class="line2">13033976013</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">QQ客服</div>
+            <div class="line2">392653948</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">电子邮箱</div>
+            <div class="line2">392653948@qq.com</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">采购经理</div>
+            <div class="line2">李立新</div>
+        </div>
+        <div class="divlines">
+            <div class="line1">公司地址</div>
+            <div class="line2">河南省 郑州市 云和学院 中国-鲜盟网 钻石级 总公司</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=R7ELwmRlmGEvGLzB0GRspTC79S87LsEi"></script>
+    <div class="mapbox">
+        <div style="height:40px;font-size:24px;margin-top:20px;color:#FF7200">商城地图地址</div>
+        <div style="width:1000px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+    </div>
+</div>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+        map = new BMap.Map("map");
+        map.centerAndZoom(new BMap.Point(113.550754,34.808102),17);
+    }
+    function setMapEvent(){
+        map.enableScrollWheelZoom();
+        map.enableKeyboard();
+        map.enableDragging();
+        map.enableDoubleClickZoom()
+    }
+    function addClickHandler(target,window){
+        target.addEventListener("click",function(){
+            target.openInfoWindow(window);
+        });
+    }
+    function addMapOverlay(){
+        var markers = [
+            {content:"云和数据",title:"云和数据",imageOffset: {width:0,height:3},position:{lat:34.807776,lng:113.549587}}
+        ];
+        for(var index = 0; index < markers.length; index++ ){
+            var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+            var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+                imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+            })});
+            var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+            var opts = {
+                width: 200,
+                title: markers[index].title,
+                enableMessage: false
+            };
+            var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+            marker.setLabel(label);
+            addClickHandler(marker,infoWindow);
+            map.addOverlay(marker);
+        };
+        var labels = [
+        ];
+        for(var index = 0; index < labels.length; index++){
+            var opt = { position: new BMap.Point(labels[index].position.lng,labels[index].position.lat )};
+            var label = new BMap.Label(labels[index].content,opt);
+            map.addOverlay(label);
+        };
+    }
+    //向地图添加控件
+    function addMapControl(){
+        var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+        scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+        map.addControl(scaleControl);
+        var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+        map.addControl(navControl);
+        var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+        map.addControl(overviewControl);
+    }
+    var map;
+    initMap();
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="__PUBLIC__/Admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Admin/css/select.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jQuery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/jquery.idTabs.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/select-ui.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Admin/js/layer/layer.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            //异步提交表单
+            $('.btn').click(function(){
+                $.post("{:U('AuthRule/edit')}",$('#form1').serialize(),function(res){
+                    if(res.status=="ok"){
+                        layer.msg(
+                                res.msg,
+                                {icon:1},
+                                function(){
+                                    window.location.href="{:U('AuthRule/showlist')}";
+                                }
+                        );
+                    }else{
+                        layer.alert(res.msg);
+                    }
+                })
+                return false;
+            })
+
+      })
+  </script>
+</head>
+
+<body>
+<div class="place">
+    <span>位置：</span>
+    <ul class="placeul">
+        <li><a href="#">权限管理</a></li>
+        <li><a href="#">添加权限</a></li>
+    </ul>
+</div>
+
+<div class="formbody">
+    <div id="usual1" class="usual">
+        <div id="tab1" class="tabson">
+            <form action="{:U('AuthRule/edit')}" method="post" id="form1">
+            <ul class="forminfo">
+                <li><label>上级权限<b>*</b></label><input type="text" class="dfinput" disabled value="{$info['pName']|default='顶级权限'}"  style="width:400px;"/></li>
+                <input name="id" type="hidden" class="dfinput" value="{$info['id']|default=0}"  style="width:400px;"/>
+                <li><label>权限名称<b>*</b></label><input name="title" type="text" class="dfinput" value="{$info['title']}"  style="width:400px;"/></li>
+                <li><label>权限规则<b>*</b></label><input name="name" type="text" class="dfinput"  value="{$info['name']}"  style="width:400px;"/></li>
+                <li><label>&nbsp;</label><input type="button" class="btn" value="确认添加"/></li>
+            </ul>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="__PUBLIC__/Home/css/common.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/Home/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="__PUBLIC__/Home/js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Home/js/jquery.min.1.8.2.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Home/js/jquery.SuperSlide.2.1.1.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Home/js/common_js.js" type="text/javascript"></script>
+    <script src="__PUBLIC__/Home/js/login/jquery.validate.js"></script>
+    <script src="__PUBLIC__/Home/js/layer/layer.js"></script>
+    &lt;!&ndash;新加样式&ndash;&gt;
+    <style type="text/css">
+        *{margin:0;padding:0;list-style-type:none;}
+        a,img{border:0;}
+        body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+        .error{
+            color: red;
+            display: block;
+        }
+    </style>
+ <script>
+        $(function () {
+            var Obj=$('.form1').validate({
+                rules:{
+                    content:{
+                        required:true,
+                        minlength:6,
+                        maxlength:1000
+                    }
+                },
+                messages:{
+                    content:{
+                        required:'请填写评论',
+                        minlength:'用户名至少6个字符',
+                        maxlength:'用户名最多1000个字符'
+                    }
+                }
+            })
+            $('.btn').click(function(){
+                if (Obj.form()){
+                    $.post("{:U('News/sendInfo')}", $('.form1').serialize(), function (res) {
+                        if (res.status ==1) {
+                            layer.msg(res.msg,{
+                                icon: 1,
+                                time:1000
+                            });
+                        } else {
+                            layer.msg(res.msg,{
+                                icon: 2,
+                                time:1000
+                            });
+                        }
+                    }, 'json')
+                }
+
+            })
+
+        })
+    </script>
+    <script type="text/javascript">
+        var url="{:U('Index/buyCart')}";
+        var  delurl="{:U('Cart/del')}";
+        var pub="__PUBLIC__";
+        $(function(){
+            new ZoomPic("jswbox");
+            $('img.lazy').lazyload(function(){effect:"fadein";});
+            $(document).scroll(function(){
+                var T=$("body").scrollTop();
+                if(T>1600){$(".floor_nav").slideDown();}
+                else{$(".floor_nav").slideUp();}
+                if(T>=3500){$(".floor_nav li").eq(4).addClass("focus").siblings().removeClass("focus");}
+                else if(T>=3100){$(".floor_nav li").eq(3).addClass("focus").siblings().removeClass("focus");}
+                else if(T>=2600){$(".floor_nav li").eq(2).addClass("focus").siblings().removeClass("focus");}
+                else if(T>=2100){$(".floor_nav li").eq(1).addClass("focus").siblings().removeClass("focus");}
+                else if(T>=1500){$(".floor_nav li").eq(0).addClass("focus").siblings().removeClass("focus");}
+                else{$(".floor_nav li").eq(0).addClass("focus").siblings().removeClass("focus");};
+            });
+            $('#navList li').click(function(){
+                var i=$(this).index();
+                if(i==4){$("body").scrollTop('3800')}
+                else if(i==3){$("body").scrollTop('3400')}
+                else if(i==2){$("body").scrollTop('2900')}
+                else if(i==1){$("body").scrollTop('2400')}
+                else if(i==0){$("body").scrollTop('1800')}
+            })
+        })
+        function logout(){
+            layer.confirm("你确定要退出吗？",{icon:3,btn:['确定','取消']},function(){
+                $.get("{:U('Home/Member/logout')}",function(res){
+                    if(res.status=="ok"){
+                        layer.msg(res.msg,{icon:1,time:1000},function(){
+                            window.location.href="{:U('Home/Index/index')}"
+                        })
+                    }
+                })
+            })
+        }
+        function del(gid){
+            $.get(delurl,{gid:gid},function(res){
+                if(res.status=="ok"){
+                    $("div.hd_Shopping_list").click();
+                }else{
+                    layer.msg(res.msg,{icon:2});
+                }
+            });
+        }
+    </script>
+
+
+    <title>新闻页面</title>
+</head>
+
+<body>
+&lt;!&ndash;顶部样式&ndash;&gt;
+<div id="header_top">
+    <div id="top">
+        <div class="Inside_pages">
+            <if condition="$Think.session.mid egt 1">
+                <div class="Collection">下午好,{$Think.session.username},欢迎光临本小店！<em></em><a href="#">收藏我们</a></div>
+                <else/>
+                <div class="Collection">下午好,欢迎光临本小店！<em></em><a href="#">收藏我们</a></div>
+            </if>
+            &lt;!&ndash;<div class="Collection">下午好，欢迎{$Think.session.username}光临锦宏颜！<em></em><a href="#">收藏我们</a></div>&ndash;&gt;
+            <div class="hd_top_manu clearfix">
+                <ul class="clearfix">
+                    <if condition="$Think.session.mid egt 1">
+                        <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">
+                            欢迎光临本店！<a id="logout" href="javascript:logout()" class="red">[退出]</a>
+                        </li>
+                        <else/>
+                        <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">
+                            欢迎光临本店！<a href="{:U('Home/Member/login')}" class="red">[登录]</a>
+                            新用户<a href="{:U('Home/Member/register')}" class="red">[免费注册]</a>
+                        </li>
+                    </if>
+                    &lt;!&ndash;<li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">欢迎光临本店！<a href="#" class="red">[请登录]</a> 新用户<a href="#" class="red">[免费注册]</a></li>&ndash;&gt;
+                    <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="{:U('Home/Personal/order')}">我的订单</a></li>
+                    <li class="hd_menu_tit" data-addclass="hd_menu_hover"> <a href="{:U('Home/Cart/mycart')}">购物车</a> </li>
+                    <li class="hd_menu_tit" data-addclass="hd_menu_hover"><a href="#">联系我们</a></li>
+                    <li class="hd_menu_tit zhuce" data-addclass="hd_menu_hover">
+                        <a href="{:U('Home/Personal/showlist')}" class="red">[会员中心]</a>
+                    </li>
+                    &lt;!&ndash; <li class="hd_menu_tit list_name" data-addclass="hd_menu_hover"><a href="#" class="hd_menu">客户服务</a>
+                         <div class="hd_menu_list">
+                             <ul>
+                                 <li><a href="#">常见问题</a></li>
+                                 <li><a href="#">在线退换货</a></li>
+                                 <li><a href="#">在线投诉</a></li>
+                                 <li><a href="#">配送范围</a></li>
+                             </ul>
+                         </div>
+                     </li>&ndash;&gt;
+                    <li class="hd_menu_tit phone_c" data-addclass="hd_menu_hover"><a href="#" class="hd_menu "><em class="iconfont icon-shouji"></em>手机版</a>
+                        <div class="hd_menu_list erweima">
+                            <ul>
+                                <img src="__PUBLIC__/Home/images/erweima.png"  width="100px" height="100"/>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    &lt;!&ndash;顶部样式1&ndash;&gt;
+    <div id="header"  class="header page_style">
+        <div class="logo"><a href="../Index/index.html"><img src="__PUBLIC__/Home/images/logo.png" /></a></div>
+        &lt;!&ndash;结束图层&ndash;&gt;
+        <div class="Search">
+            <form action="{:U('Home/ProductList/showlist',array('bid'=>0,'maxprice'=>0,'minprice'=>0))}" method="post">
+                <p>
+                    <input name="words" type="text"  class="text"/>
+                    <input name="" type="submit" value="搜 索"  class="Search_btn"/>
+                </p>
+            </form>
+            <p class="Words"><a href="#">苹果</a><a href="#">香蕉</a><a href="#">菠萝</a><a href="#">西红柿</a><a href="#">橙子</a><a href="#">苹果</a></p>
+        </div>
+        &lt;!&ndash;购物车样式&ndash;&gt;
+        <div class="hd_Shopping_list" id="Shopping_list">
+            <div class="s_cart" style="cursor: pointer"><em class="iconfont icon-cart2"></em><a >我的购物车</a> <i class="ci-right">&gt;</i><i class="ci-count" id="shopping-amount">{$sum}</i></div>
+            <div class="dorpdown-layer">
+                <div class="spacer"></div>
+                &lt;!&ndash;<div class="prompt"></div><div class="nogoods"><b></b>购物车中还没有商品，赶紧选购吧！</div>&ndash;&gt;
+                <ul class="p_s_list">
+                    &lt;!&ndash; <li>
+                         <div class="img"><img src="__PUBLIC__/Home/images/tianma.png"></div>
+                         <div class="content"><p><a href="#">产品名称</a></p><p>颜色分类:紫花8255尺码:XL</p></div>
+                         <div class="Operations">
+                             <p class="Price">￥55.00</p>
+                             <p><a href="#">删除</a></p></div>
+                     </li>&ndash;&gt;
+                </ul>
+                <div class="Shopping_style">
+                    <div class="p-total">共<b class="totalnum"></b>件商品　共计<strong id="totalprice"></strong></div>
+                    <a href="{:U('Home/Cart/mycart')}" title="去购物车结算" id="btn-payforgoods" class="Shopping">去购物车结算</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    &lt;!&ndash;菜单导航样式&ndash;&gt;
+    <div id="Menu" class="clearfix">
+        <div class="index_style clearfix">
+            <div id="allSortOuterbox" class="display">
+                <div class="t_menu_img"></div>
+
+            </div>
+            <script>$("#allSortOuterbox").slide({ titCell:".Menu_list li",mainCell:".menv_Detail",	});</script>
+            &lt;!&ndash;菜单栏&ndash;&gt;
+            <div class="Navigation" id="Navigation">
+                <ul class="Navigation_name">
+                    <li><a href="Home.html">首页</a></li>
+                    <li><a href="product_list.html">产品列表</a></li>
+                    <li><a href="Limit_buy.html">限时特卖</a><em class="hot_icon"></em></li>
+                    <li><a href="#">联系我们</a></li>
+                    <li><a href="#">鲜盟人才</a></li>
+                    <li><a href="#">鲜盟金融</a></li>
+                    <li><a href="#">鲜盟投资</a></li>
+                    <li><a href="Brands.html">销售品牌</a></li>
+                </ul>
+            </div>
+            <script>$("#Navigation").slide({titCell:".Navigation_name li"});</script>
+            &lt;!&ndash; <a href="#" class="link_bg"><img src="__PUBLIC__/Home/images/link_bg_03.png" /></a>&ndash;&gt;
+        </div>
+    </div>
+</div>-->
+
+<layout name="Public/layout"/>
+<style type="text/css">
+    *{margin:0;padding:0;list-style-type:none;}
+    a,img{border:0;}
+    body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+    .error{
+        color: red;
+        display: block;
+    }
+    .catepage{
+
+        margin-top:30px ;
+    }
+    .catepage a{
+        border-radius: 50px;
+        margin: 2px;
+        width: 25px;
+        height: 15px;
+        line-height: 15px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        text-align: center;
+        background-color:orangered;
+        padding: 5px;
+        font-weight: bolder;
+
+    }
+    .catepage a:hover{
+        background-color: white;
+        color: #00aaee;
+        font-weight: bolder;
+    }
+    .current{
+        border-radius: 50px;
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ccc;
+        line-height: 23px;
+        display: inline-block;
+        padding: 5px;
+        text-align: center;
+    }
+    .zan{
+        background-color: #ccc;
+        border: 1px solid #6c6c6c;
+        border-radius: 10px;
+        height: 130px;
+        float: left;
+        margin-left: 150px;;
+        position: absolute;
+        left: 600px;
+       top: 580px;
+
+
+    }
+
+</style>
+<script src="__PUBLIC__/Home/js/login/jquery.validate.js"></script>
+<!--<script>
+    $(function () {
+        var Obj=$('.form1').validate({
+            rules:{
+                content:{
+                    required:true,
+                    minlength:6,
+                    maxlength:1000
+                }
+            },
+            messages:{
+                content:{
+                    required:'请填写评论',
+                    minlength:'用户名至少6个字符',
+                    maxlength:'用户名最多1000个字符'
+                }
+            }
+        })
+        $('.btn').click(function(){
+            if (Obj.form()){
+                $.post("{:U('News/sendInfo')}", $('.form1').serialize(), function (res) {
+                    if (res.status ==1) {
+                        layer.msg(res.msg,{
+                            icon: 1,
+                            time:1000
+                        },function () {
+                           window.location.reload();
+                            $(".btn").attr('disabled','true');
+                            $(".btn").val("已提交");
+                        });
+                    } else {
+                        layer.msg(res.msg,{
+                            icon: 2,
+                            time:1000
+                        });
+                    }
+                }, 'json')
+            }
+
+        })
+
+    })
+</script>-->
+
+
+<div style="width: 1200px;margin: 0px auto">
+<img src="__PUBLIC__/Home/images/AD/ad-4.jpg" alt=""  >
+</div>
+<div style="width: 1200px;margin: 0 auto;left: 5px">
+
+
+        <!--文章内容-->
+                <div style="position: relative">
+                 <div class="neirong" style="width: 980px;max-height:500px;min-height:100px;overflow: auto;float: left;">
+                                   <volist name="info" id="v">
+                                       <input id="nid" type="hidden" name="nid" value="{$v['id']}">
+                                    <p style="text-align: center;font-size: 25px;font-weight: bold;margin-top: 50px;">{$v['cate']}</p>
+                                    <p style="text-align: center;font-size: 15px;font-weight: bold;margin-top: 50px;">{$v.author}&nbsp;&nbsp;&nbsp;{$v.addtime|date='Y-m-d',###}</p>
+                                    <m style="margin:60px 50px;line-height: 40px;padding-top: 30px;font-size: 15px">{$v.content}</m>
+                                   <!--<div class="zan" style="color: orangered;font-size: 25px;padding-top: 20px;">
+                                        <div id="fondNum" style="text-align: center">{$v['likenum']}</div>
+                                        <img class="likeBtn" style="display: block;cursor:pointer;width: 80px" src="__PUBLIC__/Home/images/dianzan.jpg" alt="">
+                                        <div class="likeBtn" style="font-size: 25px;text-align: center;cursor:pointer">+</div>
+                                    </div>-->
+                                   </volist>
+
+
+
+                </div>
+                </div>
+        <!--<div class="zan" style="color: orangered;font-size: 25px;padding-top: 20px;">
+            <div id="fondNum" style="text-align: center">{$v['likenum']}</div>
+            <img style="display: block;width: 80px" src="__PUBLIC__/Home/images/dianzan.jpg" alt="">
+            <div id="likeBtn" style="font-size: 25px;text-align: center;cursor:pointer">+</div>
+        </div>-->
+        <!--侧边新闻内容-->
+                <div style="width: 199px;height: 280px;line-height: 20px;border: 5px solid orangered;border-radius: 10px;float: left;margin-top: 50px">
+                    <table style="margin: 0 auto">
+                        <th colspan="2" style="font-size: 20px;text-align: center;margin: 0px auto;color: orangered">商城文章</th>
+                        <br>
+                    <volist name="info1" id="v">
+                        <tr style="border-bottom: 1px solid #ccc;color: #ccc">
+                            <td style="color: #ccc;height: 30px"><a style="color: #6c6c6c" href="{:U('Home/Article/articledetail',array('id'=>$v['id']))}" target="_self" >{$v.cate}</a></td>
+
+                            <td style="color: #ccc ">{$v.addtime|date="Y/m/d",###}</td>
+
+                        </tr>
+
+
+                    </volist>
+
+                    </table>
+                </div>
+
+
+
+        <!--//评论区-->
+
+        <div class="comment" style="clear: both;padding-top: 50px;">
+<!--
+
+                        <div style="font-size: 20px;color: orangered;">会员评论</div>
+
+                        <textarea name="content" class="content"  placeholder="文明上网,登录评论 !" style="border: 1px solid #6c6c6c;width: 500px;margin: 20px 0;height: 100px;display: block;float: left"></textarea>
+
+
+                        <input type="button" value="提交评论" class="btn" style="margin:20px 0;font-size: 18px;width: 120px;height: 40px;clear:both; display: block;">
+
+                </div>-->
+</div>
+
+<div style="width:1200px;margin: 0 auto;">
+   <!-- <div class="response" style="width: 600px;max-height:600px;line-height: 30px;border: 1px solid #ccc;border-radius: 10px;margin-top: 80px;">
+        <p style="font-size: 18px">全部评论</p>
+        <br>
+        <volist name="list" id="val" key="k">
+            <dl>
+                <dd style="padding-left:20px ">用户名:{$val['username']}</dd>
+                <dd style="padding-left: 50px;color: #6c6c6c">评论:{$val['commentcontent']}<dd style="padding-left: 50px;margin-right: 300px;color: #6c6c6c">评论时间:{$val['addtime']|date="Y/m/d H:i:s",###}</dd></dd>
+            </dl>
+        </volist>
+        <div class="catepage" style="with:100px;padding-left: 20px">
+            {$page}
+        </div>
+    </div>-->
+</div>
+<div>
+</div>
+
+<script>
+    /* $(function () {
+       $(".likeBtn").click(function(){
+            var nid=$("#nid").val();
+            $.get("{:U('News/likeNum')}",{nid:nid},function (res) {
+                if(res.status=="ok"){
+                    $("#fondNum").html(res.msg);
+                }
+            })
+        })
+    })*/
+    /*function addToLogin(){
+        //判断用户是否登陆过
+        var mid=$('#mid').val();
+        if( mid){
+            $.post("/index.php/Home/Order/toBuyCreateOrder.html",$("#ECS_FORMBUY").serialize(),function(res){
+                if(res.status=="ok"){
+                    layer.msg(res.msg,{icon:1,time:1000},function(){
+                        window.location.href="/index.php/Home/Order/showlist.html?oid="+res.oid;
+                    })
+                }else{
+                    layer.msg(res.msg,{icon:2,time:1000})
+                }
+            });
+        }else{
+            layer.open({
+                type:2,
+                title:"",
+                skin:'demo-class',
+                area:["480px","56%"],
+                shadeClose: true,
+                shade: 0.8,
+                content:"/index.php/Home/Detail/tologin.html"
+            })
+        }
+
+
+    }*/
+
+</script>

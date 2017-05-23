@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>修改图片</title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loaders.min.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/Mobile/css/style.css"/>
+    <script src="__PUBLIC__/Mobile/js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__PUBLIC__/Mobile/js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+    <script src="__PUBLIC__/Mobile/js/layer_mobile/layer.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(window).load(function(){
+            $(".loading").addClass("loader-chanage")
+            $(".loading").fadeOut(300)
+        })
+    </script>
+</head>
+<!--loading页开始-->
+<div class="loading">
+    <div class="loader">
+        <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+<!--loading页结束-->
+<body>
+<header class="top-header">
+    <a class="icona" href="javascript:history.go(-1)">
+        <img src="__PUBLIC__/Mobile/images/left.png"/>
+    </a>
+    <h3>修改图片</h3>
+
+    <a class="iconb" href="shopcar.html">
+    </a>
+</header>
+
+<div class="contaniner">
+    <form action="{:U('Personal/myPhoto')}" method="post" class="nameform" enctype="multipart/form-data" id="formInfo">
+        <div class="namechange">
+            <volist name="date" id="v" key="k">
+                <if condition="$v['pic'] eq 0">
+                    <img id="img0" src="__PUBLIC__/Home/images/people.png"/>
+                    <else />
+                    <img id="img0" src="__PUBLIC__/Admin/Uploads/member/{$v['pic']}"/>
+                </if>
+            </volist>
+        </div>
+        <input name="pic" type="file" id="file0" style="width: 65px;height: 30px;margin-left: 30px;" />
+        <!--<input type="submit" id="btn" value="保存"/>-->
+        <input type="submit" id="btn" value="保存" style="width: 80%; margin: 5% 10% ; border: none; background-color: #FC605A; font-size: 1.6em; color: #fff; padding: 4% 0; border-radius: 0.4em;"/>
+    </form>
+</div>
+
+
+<script>
+    $(function(){
+        $("#btn").click(function(){
+            $('#formInfo').ajaxSubmit(function(res){
+                if(res.status=="ok"){
+                    layer.open({
+                        content: res.msg
+                        ,skin: 'msg'
+                        ,time: 1 //2秒后自动关闭
+                    });
+                }else{
+                    layer.alert(res.msg);
+                }
+            })
+            return false;
+        })
+    })
+</script>
+
+
+<script>
+    $("#file0").change(function(){
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {$("#img0").attr("src", objUrl) ;}
+    }) ;
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+</script>
+
+
+</body>
+</html>

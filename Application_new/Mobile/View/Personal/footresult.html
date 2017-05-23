@@ -1,0 +1,23 @@
+<div style="margin-top: 3%;"></div>
+<section class="list">
+    <ul class="wall">
+
+        <volist name="foot" id="value" empty="$empty">
+            <div class="wall-column">
+            <div class="pic">
+                <a href="{:U('Detail/detail',array('gid'=>$value['gid']))}">
+                    <img src="__PUBLIC__/Admin/Uploads/goods/thumb350/350_{$value['pic']}"/>
+                    <p>{$value.goodsname}</p>
+                    <b>￥{$value.price}</b><del>￥{$value.marketprice}</del>
+                    <div class="collectbar">
+                        <label for="collect{$value['id']}"  onselectstart="return false" class="label{$value['id']}"></label>
+                        <input type="checkbox" value="{$value['id']}" onclick="mycheck({$value['id']})" id="collect{$value['id']}"/>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </volist>
+    </ul>
+</section>
+<div class="kong" style="margin-bottom: 16%;"></div>
+<div id="orderPage">{$page}</div>

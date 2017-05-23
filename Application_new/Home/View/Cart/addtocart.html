@@ -1,0 +1,42 @@
+
+<layout name="Public/layout"/>
+
+<!-- 中间开始 -->
+
+   <div style="margin-bottom:20px;padding:45px;background:#F5F5F5;">
+     <div class="box">
+        <h1 style="color:#71B247;margin:10px 0">商品已成功加入购物车</h1>
+        <table width="100%" border="0" style="border:0" id="cart">
+              <tr>
+                <td>
+                    <a href="">
+                        <img src="__PUBLIC__/Admin/Uploads/goods/{$goodsInfo['pic']}" alt="" style="width:80px;margin:10px;vertical-align:middle" />
+                        {$goodsInfo["goodsname"]} &nbsp;&nbsp;购买数量：{$goodsInfo["buynum"]} &nbsp;&nbsp;单价：￥{$goodsInfo["price"]}
+                    </a>
+                </td>
+                <td class="pxtitle" style="border:0">
+                    <a href="{:U('ProductList/showlist')}" style="padding:10px 20px;font-size:14px;">继续购物</a>
+                    <a href="{:U('Cart/mycart')}" style="padding:10px 20px;font-size:14px;background:#B1191A">去购物车结算</a>
+                </td>
+            </tr>
+            </table>
+    </div>
+   </div>
+    <div class="pxlistcon box">
+         <div class="pxlist" >
+            <h3>购买该商品的用户还购买了</h3>
+            <ul>
+                <volist name="someLike" id="somelist">
+                <li>
+                   <a href="{:U('Home/Detail/detail',array('gid'=>$somelist['gid']))}" title="">
+                        <img src="__PUBLIC__/Admin/Uploads/goods/{$somelist['pic']}" alt="" />
+                        <span>{$somelist['goodsname']}</span>
+                   </a>
+                   <p>￥{$somelist['price']}</p>
+                </li>
+                </volist>
+            </ul>
+           </div>
+            
+    </div>
+<!-- 中间结束 -->

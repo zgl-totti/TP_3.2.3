@@ -1,0 +1,63 @@
+
+<layout name="Public/layout"/>
+
+<script type="text/javascript" src="__PUBLIC__/Home/js/jquery.countdown.min.js"></script>
+<div class="limit_style" id="">
+    <div id="slideBox" class="slideBox">
+        <div class="hd">
+            <ul class="smallUl"></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(255, 227, 130); background-position:center; width:100%; height:350px;"></div></a></li>
+                <li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(255, 227, 130); background-position:center ; width:100%; height:350px;"></div></a></li>
+                <li><a href="#" target="_blank"><div style="background:url(__PUBLIC__/Home/images/AD/ad-9.jpg) no-repeat rgb(226, 155, 197); background-position:center; width:100%; height:350px;"></div></a></li>
+            </ul>
+        </div>
+        <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+        <a class="prev" href="javascript:void(0)"></a>
+        <a class="next" href="javascript:void(0)"></a>
+
+    </div>
+    <script type="text/javascript">
+        jQuery("#slideBox").slide({titCell:".hd ul",mainCell:".bd ul",autoPlay:true,autoPage:true});
+    </script>
+</div>
+<div id="ProductMenu" class="sw_categorys_nav">
+    <div class="container">
+        <div class="allcategorys">
+            <h3 class="title-item-hd">团购商品分类</h3>
+        </div>
+        <ul class="Classified Limited_Category">
+            <li class=""><a href="#Area">白酒</a></li>
+            <li class="active"><a href="#Area1">红酒</a></li>
+            <li class=""> <a href="#">保健酒</a></li>
+            <li class=""><a href="#">洋酒</a></li>
+            <li> <a href="#">茶叶</a></li>
+            <li><a href="#">果酒</a></li>
+        </ul>
+    </div>
+</div>
+<div class="Inside_pages clearfix">
+    <!--限时团购-->
+    <div class="limit_style Preferential_list">
+        <div class="pic_sort clearfix" id="Area">
+            <volist name="cele" id="val" key="k">
+                <ul class="list">
+                    <li class="pic_img">
+                        <a href="Limit_buy_Detailed.html"><img src="__PUBLIC__/Admin/Uploads/goods/{$val.pic}" width="300px" height="200px"></a>
+                    </li>
+                    <li class="pic_inner">
+                        <div class="btn"><a href="Limit_buy_Detailed.html" class="btn_gm"></a></div>
+                        <div class="pic_Price left"><b>￥{$val.price}</b></div>
+                        <div class="Number right">
+                            <p class="Number_Price">￥{$val.marketprice}</p>
+                            <p class="pic_Number">{$val.num}件</p>
+                        </div>
+                    </li>
+                </ul>
+          </volist>
+        </div>
+    </div>
+</div>
+
