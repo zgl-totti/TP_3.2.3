@@ -9,7 +9,7 @@ return array(
         'DB_USER'               =>  'root',      // 用户名
         'DB_PWD'                =>  'root',          // 密码
         'DB_PREFIX'             =>  'beauty_',    // 数据库表前缀
-        'DB_DSN'                =>  'mysql:host=localhost;port=3306;dbname=four;charset=utf8',
+        'DB_DSN'                =>  'mysql:host=localhost;port=3306;dbname=tp_3.2.3;charset=utf8',
 
         //'SHOW_PAGE_TRACE'       =>  true,
 
